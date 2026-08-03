@@ -40,7 +40,7 @@ import { APP_CONFIG } from '@core/tokens/app-config.token';
   styles: `
     .footer {
       border-top: 1px solid var(--c-line);
-      padding-block: var(--space-l);
+      padding-block: var(--space-m);
     }
 
     .footer__inner {
@@ -59,11 +59,12 @@ import { APP_CONFIG } from '@core/tokens/app-config.token';
     .footer__links a:hover { color: var(--c-ink); }
 
     .footer__credit {
-      margin-top: var(--space-m);
-      padding-top: var(--space-m);
+      margin-top: var(--space-s);
+      padding-top: var(--space-s);
       border-top: 1px solid var(--c-line);
       font-size: var(--step--1);
       color: var(--c-mute);
+      text-align: right;
     }
 
     .footer__credit a { transition: color 300ms var(--ease); }
