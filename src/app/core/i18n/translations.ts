@@ -56,6 +56,8 @@ export interface Dictionary {
   };
   readonly footer: {
     readonly tagline: string;
+    readonly madeBy: string;
+    readonly emailLabel: string;
   };
   readonly notFound: {
     readonly title: string;
@@ -119,6 +121,8 @@ export const translations: Record<Lang, Dictionary> = {
     },
     footer: {
       tagline: 'Dark piano and cinematic soundscapes',
+      madeBy: 'Site by',
+      emailLabel: 'Email',
     },
     notFound: {
       title: 'Silence',
@@ -192,6 +196,8 @@ export const translations: Record<Lang, Dictionary> = {
     },
     footer: {
       tagline: 'Тёмное фортепиано и кинематографичные саундскейпы',
+      madeBy: 'Разработка сайта —',
+      emailLabel: 'Почта',
     },
     notFound: {
       title: 'Тишина',
