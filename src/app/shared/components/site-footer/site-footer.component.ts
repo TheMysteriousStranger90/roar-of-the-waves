@@ -24,6 +24,17 @@ import { APP_CONFIG } from '@core/tokens/app-config.token';
 
         <small class="footer__copy">© {{ year }} {{ config.projectName }}</small>
       </div>
+
+      <div class="shell footer__credit">
+        <small>
+          {{ t().footer.madeBy }}
+          <a [href]="config.developer.website" target="_blank" rel="noopener noreferrer">{{ config.developer.name }}</a>
+          <span aria-hidden="true">·</span>
+          <a [href]="config.developer.github" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span aria-hidden="true">·</span>
+          <a [href]="'mailto:' + config.developer.email">{{ t().footer.emailLabel }}</a>
+        </small>
+      </div>
     </footer>
   `,
   styles: `
@@ -46,6 +57,18 @@ import { APP_CONFIG } from '@core/tokens/app-config.token';
 
     .footer__links { display: flex; gap: var(--space-m); list-style: none; margin: 0; padding: 0; }
     .footer__links a:hover { color: var(--c-ink); }
+
+    .footer__credit {
+      margin-top: var(--space-m);
+      padding-top: var(--space-m);
+      border-top: 1px solid var(--c-line);
+      font-size: var(--step--1);
+      color: var(--c-mute);
+    }
+
+    .footer__credit a { transition: color 300ms var(--ease); }
+    .footer__credit a:hover { color: var(--c-ink); }
+    .footer__credit span { padding-inline: 0.4em; opacity: 0.6; }
   `,
 })
 export class SiteFooterComponent {
