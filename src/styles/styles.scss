@@ -1,0 +1,67 @@
+@use 'tokens';
+@use 'reset';
+
+.shell {
+  width: min(100% - 2.5rem, 76rem);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-xl);
+  border-top: 1px solid var(--c-line);
+}
+
+.eyebrow {
+  font-size: var(--step--1);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--c-mute);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 300;
+  line-height: 0.94;
+  letter-spacing: -0.02em;
+}
+
+.prose {
+  max-width: var(--measure);
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  line-height: 1.5;
+}
+
+.skip-link {
+  position: absolute;
+  inset-inline-start: -9999px;
+
+  &:focus {
+    inset-inline-start: 1rem;
+    top: 1rem;
+    z-index: 100;
+    padding: 0.75rem 1rem;
+    background: var(--c-ink);
+    color: var(--c-paper);
+  }
+}
+
+/* Film grain overlay — the monochrome signature of the site */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(1.75rem);
+  transition: opacity 900ms var(--ease), transform 900ms var(--ease);
+
+  &.is-visible { opacity: 1; transform: none; }
+}

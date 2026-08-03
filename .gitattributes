@@ -1,0 +1,28 @@
+# Auto detect text files and normalize line endings to LF on checkin.
+* text=auto eol=lf
+
+# Source
+*.ts text
+*.html text
+*.scss text
+*.css text
+*.json text
+*.md text
+*.svg text
+*.yml text
+*.yaml text
+
+# Binary assets — never touch line endings, never show text diffs.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf diff=
+
+# Treat generated/vendored data as generated so it's collapsed in PR diffs.
+package-lock.json linguist-generated=true merge=ours
