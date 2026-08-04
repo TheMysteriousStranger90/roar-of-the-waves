@@ -41,7 +41,7 @@ import { TrackCardComponent } from '@shared/components/track-card/track-card.com
     }
 
     .note {
-      color: var(--c-mute);
+      color: var(--c-ink);
       margin-bottom: var(--space-xl);
       padding-bottom: var(--space-l);
       border-bottom: 1px solid var(--c-line);
