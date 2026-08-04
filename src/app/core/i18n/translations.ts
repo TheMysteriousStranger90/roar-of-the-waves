@@ -44,6 +44,8 @@ export interface Dictionary {
     readonly titleLine1: string;
     readonly titleLine2: string;
     readonly portraitAlt: string;
+    readonly prevPhotoLabel: string;
+    readonly nextPhotoLabel: string;
     readonly paragraph1: string;
     readonly paragraph2: string;
   };
@@ -106,6 +108,8 @@ export const translations: Record<Lang, Dictionary> = {
       eyebrow: 'About',
       titleLine1: 'Two distant',
       titleLine2: 'musical worlds',
+      prevPhotoLabel: 'Previous photo',
+      nextPhotoLabel: 'Next photo',
       portraitAlt: 'Portrait of the artist behind Roar of the Waves, seated at the piano',
       paragraph1:
         'Roar of the Waves is a one-man musical project where sound transcends mere composition to become a vessel for storytelling and quiet catharsis. Striving to blend the atmospheric touch of modern neoclassical music with the passionate depth of romanticism, the project paints poetic narratives through the prism of dark piano and cinematic soundscapes.',
@@ -181,6 +185,8 @@ export const translations: Record<Lang, Dictionary> = {
       eyebrow: 'О проекте',
       titleLine1: 'Два далёких',
       titleLine2: 'музыкальных мира',
+      prevPhotoLabel: 'Предыдущее фото',
+      nextPhotoLabel: 'Следующее фото',
       portraitAlt: 'Портрет автора проекта Roar of the Waves за роялем',
       paragraph1:
         'Roar of the Waves — это сольный музыкальный проект, в котором звук выходит за рамки простой композиции и становится способом рассказывать истории и находить тихое очищение. Стремясь соединить атмосферность современной неоклассики со страстной глубиной романтизма, проект рисует поэтичные образы через призму тёмного фортепиано и кинематографичных саундскейпов.',
