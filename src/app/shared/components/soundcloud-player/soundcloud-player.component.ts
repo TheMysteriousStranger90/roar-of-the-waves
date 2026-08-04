@@ -50,7 +50,7 @@ export class SoundcloudPlayerComponent {
 
     const params = new URLSearchParams({
       url: source,
-      color: '%23000000',
+      color: '#000000',
       auto_play: 'false',
       hide_related: 'true',
       show_comments: 'false',
