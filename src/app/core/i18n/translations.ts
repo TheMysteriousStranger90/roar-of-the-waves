@@ -99,7 +99,7 @@ export const translations: Record<Lang, Dictionary> = {
     music: {
       eyebrow: 'Discography',
       title: 'Music',
-      note: 'Every release below stands on its own as a single — a self-contained story rather than a chapter of a larger one. A full-length album may follow once enough of these stories have gathered to tell it.',
+      note: 'Every release below stands on its own as a single, not a chapter of something larger. A full-length album may follow later — once enough of these statements have gathered to form one larger whole.',
       loading: 'Loading…',
       error: 'The catalogue could not be loaded right now.',
       empty: 'No tracks published yet.',
@@ -176,7 +176,7 @@ export const translations: Record<Lang, Dictionary> = {
     music: {
       eyebrow: 'Дискография',
       title: 'Музыка',
-      note: 'Каждый релиз ниже существует сам по себе как сингл — самостоятельная история, а не глава чего-то большего. Полноформатный альбом может появиться позже, когда таких историй накопится достаточно, чтобы они сложились в одну большую.',
+      note: 'Каждый релиз ниже существует сам по себе как сингл, а не глава чего-то большего. Полноформатный альбом может появиться позже — когда таких высказываний накопится достаточно, чтобы сложить из них одно большое целое.',
       loading: 'Загрузка…',
       error: 'Не удалось загрузить каталог прямо сейчас.',
       empty: 'Треки пока не опубликованы.',
