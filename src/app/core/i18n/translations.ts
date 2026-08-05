@@ -88,7 +88,7 @@ export const translations: Record<Lang, Dictionary> = {
     },
     home: {
       eyebrow: 'One-man musical project',
-      lede: 'Sound as a vessel for storytelling and quiet catharsis — dark piano, cinematic soundscapes, and the fragile stillness that follows a long journey.',
+      lede: 'Sound as a vessel for storytelling and quiet catharsis — dark piano, cinematic soundscapes, and the weight of unspoken words.',
       cta: 'Listen',
       selectedWorkEyebrow: 'Selected work',
       loading: 'Loading…',
@@ -165,7 +165,7 @@ export const translations: Record<Lang, Dictionary> = {
     },
     home: {
       eyebrow: 'Сольный музыкальный проект',
-      lede: 'Звук как способ рассказать историю и найти тихое очищение — тёмное фортепиано, кинематографичные саундскейпы и хрупкая тишина, наступающая после долгого пути.',
+      lede: 'Звук как сосуд для историй и тихого катарсиса — тёмное фортепиано, кинематографичные саундскейпы и тяжесть невысказанных слов.',
       cta: 'Слушать',
       selectedWorkEyebrow: 'Избранное',
       loading: 'Загрузка…',
