@@ -24,7 +24,7 @@ const SOUNDCLOUD_TRACK_PREFIX = 'https://soundcloud.com/';
         height="140"
         loading="lazy"
         frameborder="0"
-        allow="autoplay"
+        allow="autoplay; encrypted-media"
         scrolling="no"
       ></iframe>
     }
