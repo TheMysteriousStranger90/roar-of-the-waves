@@ -114,7 +114,7 @@ export const translations: Record<Lang, Dictionary> = {
       paragraph1:
         'Roar of the Waves is a one-man musical project where sound transcends mere composition to become a vessel for storytelling and quiet catharsis. Striving to blend the atmospheric touch of modern neoclassical music with the passionate depth of romanticism, the project paints poetic narratives through the prism of dark piano and cinematic soundscapes.',
       paragraph2:
-        "For the creator behind Roar of the Waves, music is not a profession, but a vital way to speak when words fall short. The project's sonic architecture is an attempt to bridge two distant musical worlds that have deeply shaped its creator: the heavy, expressive grandeur of Russian classical music (S. Rachmaninoff, A. Scriabin, S. Prokofiev, A. Glazunov, among others) and the nostalgic, melancholic film scores of 1960s and 1970s French and Italian cinema (François de Roubaix, Philippe Sarde, Ennio Morricone, Bruno Nicolai, and many more).",
+        "For the creator behind Roar of the Waves, music is not a profession, but a vital way to speak when words fall short. The project's sonic architecture is an attempt to bridge two distant musical worlds that have deeply shaped its creator: the heavy, expressive grandeur of Russian classical music (S. Rachmaninoff, A. Scriabin, S. Prokofiev, A. Glazunov, among others) and the nostalgic, melancholic film scores of 1960s and 1970s French and Italian cinema (François de Roubaix, Philippe Sarde, Ennio Morricone, Franco Mannino, and many more).",
     },
     shared: {
       everyTrackStory:
@@ -191,7 +191,7 @@ export const translations: Record<Lang, Dictionary> = {
       paragraph1:
         'Roar of the Waves — это сольный музыкальный проект, в котором звук выходит за рамки простой композиции и становится способом рассказывать истории и находить тихое очищение. Стремясь соединить атмосферность современной неоклассики со страстной глубиной романтизма, проект рисует поэтичные образы через призму тёмного фортепиано и кинематографичных саундскейпов.',
       paragraph2:
-        'Для создателя Roar of the Waves музыка — не профессия, а насущный способ говорить тогда, когда не хватает слов. Звуковая архитектура проекта — это попытка соединить два далёких музыкальных мира, глубоко повлиявших на его автора: тяжёлое, выразительное величие русской классической музыки (С. Рахманинов, А. Скрябин, С. Прокофьев, А. Глазунов и другие) и ностальгичные, меланхоличные саундтреки французского и итальянского кино 1960-х и 1970-х годов (Франсуа де Рубэ, Филипп Сард, Эннио Морриконе, Бруно Николаи и многие другие).',
+        'Для создателя Roar of the Waves музыка — не профессия, а насущный способ говорить тогда, когда не хватает слов. Звуковая архитектура проекта — это попытка соединить два далёких музыкальных мира, глубоко повлиявших на его автора: тяжёлое, выразительное величие русской классической музыки (С. Рахманинов, А. Скрябин, С. Прокофьев, А. Глазунов и другие) и ностальгичные, меланхоличные саундтреки французского и итальянского кино 1960-х и 1970-х годов (Франсуа де Рубэ, Филипп Сард, Эннио Морриконе, Франко Маннино и многие другие).',
     },
     shared: {
       everyTrackStory:
