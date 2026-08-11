@@ -122,7 +122,7 @@ export const translations: Record<Lang, Dictionary> = {
     coordinates: {
       eyebrow: 'Points of reference',
       title: 'Coordinates',
-      note: 'Not influences to be argued for, but coordinates the music quietly orbits — films, books, and records that shaped how these pieces breathe. Cinema comes first; the rest of the map will be filled in over time.',
+      note: 'A personal map of my favorite works. These are the films, books, and music that I deeply resonate with and that directly inspired me to create.',
       filmsHeading: 'Cinema',
       musicHeading: 'Music',
       literatureHeading: 'Literature',
@@ -217,7 +217,7 @@ export const translations: Record<Lang, Dictionary> = {
     coordinates: {
       eyebrow: 'Точки отсчёта',
       title: 'Координаты',
-      note: 'Не влияния, которые нужно доказывать, а координаты, вокруг которых тихо вращается музыка, — фильмы, книги и пластинки, определившие дыхание этих пьес. Сначала — кино; остальная карта заполнится со временем.',
+      note: 'Личная карта моих любимых произведений. Это фильмы, книги и музыка, которые мне по-настоящему близки и которые напрямую вдохновили меня на творчество.',
       filmsHeading: 'Кино',
       musicHeading: 'Музыка',
       literatureHeading: 'Литература',
