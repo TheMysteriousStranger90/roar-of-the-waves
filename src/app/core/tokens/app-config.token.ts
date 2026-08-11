@@ -17,6 +17,7 @@ export interface AppConfig {
   readonly tagline: string;
   readonly origin: string;
   readonly tracksEndpoint: string;
+  readonly filmsEndpoint: string;
   readonly social: readonly SocialLink[];
   readonly developer: DeveloperCredit;
 }
@@ -28,6 +29,7 @@ export const defaultAppConfig: AppConfig = {
   tagline: 'Dark piano and cinematic soundscapes',
   origin: 'https://roarofthewaves.com',
   tracksEndpoint: 'assets/data/tracks.json',
+  filmsEndpoint: 'assets/data/coordinates-films.json',
   social: [
     { label: 'SoundCloud', href: 'https://soundcloud.com/the_mysterious_stranger90' },
   ],

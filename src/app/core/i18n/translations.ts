@@ -13,6 +13,7 @@ export interface Dictionary {
   readonly nav: {
     readonly home: string;
     readonly music: string;
+    readonly coordinates: string;
     readonly about: string;
   };
   readonly header: {
@@ -35,6 +36,18 @@ export interface Dictionary {
     readonly eyebrow: string;
     readonly title: string;
     readonly note: string;
+    readonly loading: string;
+    readonly error: string;
+    readonly empty: string;
+  };
+  readonly coordinates: {
+    readonly eyebrow: string;
+    readonly title: string;
+    readonly note: string;
+    readonly filmsHeading: string;
+    readonly musicHeading: string;
+    readonly literatureHeading: string;
+    readonly comingSoon: string;
     readonly loading: string;
     readonly error: string;
     readonly empty: string;
@@ -69,6 +82,7 @@ export interface Dictionary {
   readonly seo: {
     readonly home: { readonly title: string; readonly description: string };
     readonly music: { readonly title: string; readonly description: string };
+    readonly coordinates: { readonly title: string; readonly description: string };
     readonly about: { readonly title: string; readonly description: string };
   };
 }
@@ -78,6 +92,7 @@ export const translations: Record<Lang, Dictionary> = {
     nav: {
       home: 'Home',
       music: 'Music',
+      coordinates: 'Coordinates',
       about: 'About',
     },
     header: {
@@ -103,6 +118,18 @@ export const translations: Record<Lang, Dictionary> = {
       loading: 'Loading…',
       error: 'The catalogue could not be loaded right now.',
       empty: 'No tracks published yet.',
+    },
+    coordinates: {
+      eyebrow: 'Points of reference',
+      title: 'Coordinates',
+      note: 'Not influences to be argued for, but coordinates the music quietly orbits — films, books, and records that shaped how these pieces breathe. Cinema comes first; the rest of the map will be filled in over time.',
+      filmsHeading: 'Cinema',
+      musicHeading: 'Music',
+      literatureHeading: 'Literature',
+      comingSoon: 'Coming soon.',
+      loading: 'Loading…',
+      error: 'The list could not be loaded right now.',
+      empty: 'Nothing here yet.',
     },
     about: {
       eyebrow: 'About',
@@ -144,6 +171,11 @@ export const translations: Record<Lang, Dictionary> = {
         description:
           'The singles of Roar of the Waves — neoclassical piano and cinematic soundscapes, released one self-contained story at a time.',
       },
+      coordinates: {
+        title: 'Coordinates',
+        description:
+          'The films behind Roar of the Waves — a personal map of the cinema that shaped the sound of the project.',
+      },
       about: {
         title: 'About',
         description:
@@ -155,6 +187,7 @@ export const translations: Record<Lang, Dictionary> = {
     nav: {
       home: 'Главная',
       music: 'Музыка',
+      coordinates: 'Координаты',
       about: 'О проекте',
     },
     header: {
@@ -180,6 +213,18 @@ export const translations: Record<Lang, Dictionary> = {
       loading: 'Загрузка…',
       error: 'Не удалось загрузить каталог прямо сейчас.',
       empty: 'Треки пока не опубликованы.',
+    },
+    coordinates: {
+      eyebrow: 'Точки отсчёта',
+      title: 'Координаты',
+      note: 'Не влияния, которые нужно доказывать, а координаты, вокруг которых тихо вращается музыка, — фильмы, книги и пластинки, определившие дыхание этих пьес. Сначала — кино; остальная карта заполнится со временем.',
+      filmsHeading: 'Кино',
+      musicHeading: 'Музыка',
+      literatureHeading: 'Литература',
+      comingSoon: 'Скоро здесь появится список.',
+      loading: 'Загрузка…',
+      error: 'Не удалось загрузить список прямо сейчас.',
+      empty: 'Здесь пока пусто.',
     },
     about: {
       eyebrow: 'О проекте',
@@ -220,6 +265,11 @@ export const translations: Record<Lang, Dictionary> = {
         title: 'Музыка',
         description:
           'Синглы Roar of the Waves — неоклассическое фортепиано и кинематографичные саундскейпы, выходящие по одной самостоятельной истории за раз.',
+      },
+      coordinates: {
+        title: 'Координаты',
+        description:
+          'Фильмы, стоящие за Roar of the Waves, — личная карта кино, определившего звучание проекта.',
       },
       about: {
         title: 'О проекте',
