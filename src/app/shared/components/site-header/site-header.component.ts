@@ -77,18 +77,25 @@ type Theme = 'light' | 'dark';
 
     .header__nav {
       display: flex;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
       gap: var(--space-m);
       font-size: var(--step--1);
       letter-spacing: 0.22em;
       text-transform: uppercase;
     }
 
-    .header__nav a { color: var(--c-mute); transition: color 300ms var(--ease); }
+    .header__nav a {
+      white-space: nowrap;
+      color: var(--c-mute);
+      transition: color 300ms var(--ease);
+    }
     .header__nav a:hover, .header__nav a.is-active { color: var(--c-ink); }
 
     .header__controls {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 0.5rem;
     }
 
@@ -98,6 +105,7 @@ type Theme = 'light' | 'dark';
       text-transform: uppercase;
       border: 1px solid var(--c-line);
       padding: 0.4rem 0.9rem;
+      white-space: nowrap;
       transition: border-color 300ms var(--ease), color 300ms var(--ease);
     }
 
@@ -109,6 +117,11 @@ type Theme = 'light' | 'dark';
     @media (max-width: 46rem) {
       .header__inner { flex-wrap: wrap; row-gap: 0.75rem; }
       .header__brand { flex: 1 1 100%; }
+      .header__nav { flex: 1 1 100%; gap: 1rem; }
+    }
+
+    @media (max-width: 26rem) {
+      .header__nav { gap: 0.75rem; }
     }
   `,
 })
