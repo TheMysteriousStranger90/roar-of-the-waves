@@ -78,7 +78,6 @@ type Category = 'cinema' | 'music' | 'literature';
 
     .coordinates-body {
       max-width: 44rem;
-      margin-inline: auto;
     }
 
     .tabs {
