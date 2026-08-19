@@ -18,6 +18,7 @@ export interface AppConfig {
   readonly origin: string;
   readonly tracksEndpoint: string;
   readonly filmsEndpoint: string;
+  readonly musicEndpoint: string;
   readonly social: readonly SocialLink[];
   readonly developer: DeveloperCredit;
 }
@@ -30,6 +31,7 @@ export const defaultAppConfig: AppConfig = {
   origin: 'https://roarofthewaves.com',
   tracksEndpoint: 'assets/data/tracks.json',
   filmsEndpoint: 'assets/data/coordinates-films.json',
+  musicEndpoint: 'assets/data/coordinates-music.json',
   social: [
     { label: 'SoundCloud', href: 'https://soundcloud.com/the_mysterious_stranger90' },
   ],

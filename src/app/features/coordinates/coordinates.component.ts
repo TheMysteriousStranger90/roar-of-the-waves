@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, effect, inject, signal } from '@angular/core';
 
 import { FilmsService } from '@core/services/films.service';
+import { MusicReleasesService } from '@core/services/music-releases.service';
 import { LanguageService } from '@core/services/language.service';
 import { SeoService } from '@core/services/seo.service';
 import { RevealOnScrollDirective } from '@shared/directives/reveal-on-scroll.directive';
@@ -52,7 +53,27 @@ type Category = 'cinema' | 'music' | 'literature';
               }
             }
             @case ('music') {
-              <p class="placeholder-note" rotwReveal>{{ t().coordinates.comingSoon }}</p>
+              @if (music.isLoading()) {
+                <p class="state">{{ t().coordinates.loading }}</p>
+              } @else if (music.hasError()) {
+                <p class="state" role="alert">{{ t().coordinates.error }}</p>
+              } @else if (music.byGenre().length === 0) {
+                <p class="state">{{ t().coordinates.empty }}</p>
+              } @else {
+                @for (group of music.byGenre(); track group.genre) {
+                  <div class="decade" rotwReveal>
+                    <h2 class="decade__label">{{ group.genre }}</h2>
+
+                    <ul class="film-list">
+                      @for (release of group.releases; track release.id) {
+                        <li class="film-row film-row--music">
+                          <a class="film-row__title" [href]="release.url" target="_blank" rel="noopener noreferrer">{{ release.title }}</a>
+                        </li>
+                      }
+                    </ul>
+                  </div>
+                }
+              }
             }
             @case ('literature') {
               <p class="placeholder-note" rotwReveal>{{ t().coordinates.comingSoon }}</p>
@@ -156,6 +177,11 @@ type Category = 'cinema' | 'music' | 'literature';
       &:hover { opacity: 0.6; }
     }
 
+    .film-row--music {
+      display: block;
+      padding-block: 0.6rem;
+    }
+
     .placeholder-note {
       font-family: var(--font-display);
       font-style: italic;
@@ -172,6 +198,7 @@ type Category = 'cinema' | 'music' | 'literature';
 })
 export class CoordinatesComponent {
   protected readonly films = inject(FilmsService);
+  protected readonly music = inject(MusicReleasesService);
   private readonly seo = inject(SeoService);
 
   protected readonly lang = inject(LanguageService);
@@ -181,6 +208,7 @@ export class CoordinatesComponent {
 
   constructor() {
     this.films.load();
+    this.music.load();
 
     effect(() => {
       const dict = this.t();
