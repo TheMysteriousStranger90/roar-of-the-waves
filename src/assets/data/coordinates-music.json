@@ -422,7 +422,7 @@
     },
     {
       "id": 15301758,
-      "title": "Piero Piccioni – Lo Straniero",
+      "title": "Piero Piccioni – Lo Straniero (Colonna sonora originale)",
       "genre": "Stage & Screen",
       "url": "https://www.discogs.com/ru/release/15301758-Piero-Piccioni-Lo-Straniero"
     },
@@ -440,7 +440,7 @@
     },
     {
       "id": 14601183,
-      "title": "Симфонический Оркестр Москвы \"Русская Филармония\" , Дирижер А. Ведерников – Музыка Российского Кино",
+      "title": "Various – Симфонический Оркестр Москвы \"Русская Филармония\" , Дирижер А. Ведерников – Музыка Российского Кино",
       "genre": "Stage & Screen",
       "url": "https://www.discogs.com/ru/release/14601183-Симфонический-Оркестр-Москвы-Русская-Филармония-Дири"
     },
@@ -469,12 +469,6 @@
       "url": "https://www.discogs.com/ru/release/1122019-Joy-Division-Unknown-Pleasures"
     },
     {
-      "id": 2285548,
-      "title": "The Cure – Disintegration",
-      "genre": "Rock",
-      "url": "https://www.discogs.com/ru/release/2285548-The-Cure-Disintegration"
-    },
-    {
       "id": 557183,
       "title": "The Cure – Faith",
       "genre": "Rock",
@@ -487,22 +481,22 @@
       "url": "https://www.discogs.com/ru/release/500317-The-Cure-Pornography"
     },
     {
-      "id": 1263964,
-      "title": "The Mission – Carved In Sand",
+      "id": 2285548,
+      "title": "The Cure – Disintegration",
       "genre": "Rock",
-      "url": "https://www.discogs.com/ru/release/1263964-The-Mission-Carved-In-Sand"
-    },
-    {
-      "id": 1049431,
-      "title": "The Mission – Children",
-      "genre": "Rock",
-      "url": "https://www.discogs.com/ru/release/1049431-The-Mission-Children"
+      "url": "https://www.discogs.com/ru/release/2285548-The-Cure-Disintegration"
     },
     {
       "id": 1079195,
       "title": "The Mission – Gods Own Medicine",
       "genre": "Rock",
       "url": "https://www.discogs.com/ru/release/1079195-The-Mission-Gods-Own-Medicine"
+    },
+    {
+      "id": 1049431,
+      "title": "The Mission – Children",
+      "genre": "Rock",
+      "url": "https://www.discogs.com/ru/release/1049431-The-Mission-Children"
     },
     {
       "id": 832989,
@@ -523,10 +517,10 @@
       "url": "https://www.discogs.com/ru/release/4855938-Nautilus-Pompilius-Князь-Тишины"
     },
     {
-      "id": 1630828,
-      "title": "Nautilus Pompilius – Крылья",
+      "id": 1593392,
+      "title": "Nautilus Pompilius – Чужая Земля",
       "genre": "Rock",
-      "url": "https://www.discogs.com/ru/release/1630828-Nautilus-Pompilius-Крылья"
+      "url": "https://www.discogs.com/ru/release/1593392-Nautilus-Pompilius-Чужая-Земля"
     },
     {
       "id": 1589416,
@@ -535,22 +529,10 @@
       "url": "https://www.discogs.com/ru/release/1589416-Nautilus-Pompilius-Титаник"
     },
     {
-      "id": 1593392,
-      "title": "Nautilus Pompilius – Чужая Земля",
+      "id": 1630828,
+      "title": "Nautilus Pompilius – Крылья",
       "genre": "Rock",
-      "url": "https://www.discogs.com/ru/release/1593392-Nautilus-Pompilius-Чужая-Земля"
-    },
-    {
-      "id": 1851524,
-      "title": "Агата Кристи – Opium",
-      "genre": "Rock",
-      "url": "https://www.discogs.com/ru/release/1851524-Агата-Кристи-Opium"
-    },
-    {
-      "id": 1857871,
-      "title": "Агата Кристи – Майн Кайф?",
-      "genre": "Rock",
-      "url": "https://www.discogs.com/ru/release/1857871-Агата-Кристи-Майн-Кайф"
+      "url": "https://www.discogs.com/ru/release/1630828-Nautilus-Pompilius-Крылья"
     },
     {
       "id": 2012367,
@@ -559,10 +541,22 @@
       "url": "https://www.discogs.com/ru/release/2012367-Агата-Кристи-Позорная-Звезда"
     },
     {
+      "id": 1851524,
+      "title": "Агата Кристи – Opium",
+      "genre": "Rock",
+      "url": "https://www.discogs.com/ru/release/1851524-Агата-Кристи-Opium"
+    },
+    {
       "id": 2011864,
       "title": "Агата Кристи – Ураган",
       "genre": "Rock",
       "url": "https://www.discogs.com/ru/release/2011864-Агата-Кристи-Ураган"
+    },
+    {
+      "id": 1857871,
+      "title": "Агата Кристи – Майн Кайф?",
+      "genre": "Rock",
+      "url": "https://www.discogs.com/ru/release/1857871-Агата-Кристи-Майн-Кайф"
     },
     {
       "id": 13783012,
@@ -577,10 +571,10 @@
       "url": "https://www.discogs.com/ru/release/14553285-Кино-Звезда-По-Имени-Солнце"
     },
     {
-      "id": 36224215,
-      "title": "Пикник + В.Самойлов – Тень Вампира",
+      "id": 36224098,
+      "title": "Пикник – Дым",
       "genre": "Rock",
-      "url": "https://www.discogs.com/ru/release/36224215-Пикник-ВСамойлов-Тень-Вампира"
+      "url": "https://www.discogs.com/ru/release/36224098-Пикник-Дым"
     },
     {
       "id": 36224011,
@@ -589,10 +583,10 @@
       "url": "https://www.discogs.com/ru/release/36224011-Пикник-Вампирские-песни"
     },
     {
-      "id": 36224098,
-      "title": "Пикник – Дым",
+      "id": 36224215,
+      "title": "Пикник + В.Самойлов – Тень Вампира",
       "genre": "Rock",
-      "url": "https://www.discogs.com/ru/release/36224098-Пикник-Дым"
+      "url": "https://www.discogs.com/ru/release/36224215-Пикник-ВСамойлов-Тень-Вампира"
     },
     {
       "id": 21356866,
