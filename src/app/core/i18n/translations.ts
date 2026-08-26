@@ -114,7 +114,7 @@ export const translations: Record<Lang, Dictionary> = {
     music: {
       eyebrow: 'Discography',
       title: 'Music',
-      note: 'Every release below stands on its own as a single, not a chapter of something larger. A full-length album may follow later — once enough of these statements have gathered to form one larger whole.',
+      note: 'Every release below stands on its own as a single, not a chapter of something larger. Each one is arranged and produced entirely at home — no live takes, no professional studio, just a simple MIDI keyboard, MuseScore Studio, and Ableton Live. A full-length album may follow later, once enough of these statements have gathered to form one larger whole.',
       loading: 'Loading…',
       error: 'The catalogue could not be loaded right now.',
       empty: 'No tracks published yet.',
@@ -209,7 +209,7 @@ export const translations: Record<Lang, Dictionary> = {
     music: {
       eyebrow: 'Дискография',
       title: 'Музыка',
-      note: 'Каждый релиз ниже существует сам по себе как сингл, а не глава чего-то большего. Полноформатный альбом может появиться позже — когда таких высказываний накопится достаточно, чтобы сложить из них одно большое целое.',
+      note: 'Каждый релиз ниже существует сам по себе как сингл, а не глава чего-то большего. Каждый трек целиком пишется и сводится дома — без живых записей и профессиональной студии, только простая MIDI-клавиатура, MuseScore Studio и Ableton Live. Полноформатный альбом может появиться позже — когда таких высказываний накопится достаточно, чтобы сложить из них одно большое целое.',
       loading: 'Загрузка…',
       error: 'Не удалось загрузить каталог прямо сейчас.',
       empty: 'Треки пока не опубликованы.',
