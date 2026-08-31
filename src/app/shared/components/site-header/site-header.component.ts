@@ -26,7 +26,6 @@ type Theme = 'light' | 'dark';
           <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">{{ t().nav.home }}</a>
           <a routerLink="/music" routerLinkActive="is-active">{{ t().nav.music }}</a>
           <a routerLink="/about" routerLinkActive="is-active">{{ t().nav.about }}</a>
-          <a routerLink="/coordinates" routerLinkActive="is-active">{{ t().nav.coordinates }}</a>
         </nav>
 
         <div class="header__controls">

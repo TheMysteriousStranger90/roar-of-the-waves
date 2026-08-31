@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component, effect, inject, signal} from '@angular/core';
+import {RouterLink} from '@angular/router';
 
 import {LanguageService} from '@core/services/language.service';
 import {SeoService} from '@core/services/seo.service';
@@ -7,7 +8,7 @@ import {RevealOnScrollDirective} from '@shared/directives/reveal-on-scroll.direc
 @Component({
   selector: 'rotw-about',
   standalone: true,
-  imports: [RevealOnScrollDirective],
+  imports: [RevealOnScrollDirective, RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section class="section">
@@ -22,6 +23,7 @@ import {RevealOnScrollDirective} from '@shared/directives/reveal-on-scroll.direc
               class="portrait__frame"
               tabindex="0"
               role="group"
+              routerLink="/coordinates"
               [attr.aria-label]="t().about.portraitAlt"
               (touchstart)="onTouchStart($event)"
               (touchend)="onTouchEnd($event)"
