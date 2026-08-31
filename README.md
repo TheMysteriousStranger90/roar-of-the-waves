@@ -66,6 +66,10 @@ Every push and pull request against `main` runs
 [`.github/workflows/ci.yml`](./.github/workflows/ci.yml), which installs
 dependencies and builds the app in production mode.
 
+## Author
+
+Bohdan Harabadzhyu (Bogdan Garabagiu)
+
 ## License
 
 MIT — see [LICENSE](./LICENSE).
