@@ -111,6 +111,7 @@ import {RevealOnScrollDirective} from '@shared/directives/reveal-on-scroll.direc
       overflow: hidden;
       border: 1px solid var(--c-line);
       touch-action: pan-y;
+      cursor: pointer;
 
       &:focus-visible {
         outline-offset: 2px;
