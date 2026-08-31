@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 
 export const routes: Routes = [
   {
@@ -12,6 +12,12 @@ export const routes: Routes = [
     title: 'Music — Roar of the Waves',
     loadComponent: () =>
       import('@features/music/music.component').then((m) => m.MusicComponent),
+  },
+  {
+    path: 'coordinates',
+    title: 'Coordinates — Roar of the Waves',
+    loadComponent: () =>
+      import('@features/coordinates/coordinates.component').then((m) => m.CoordinatesComponent,),
   },
   {
     path: 'about',

@@ -10,6 +10,7 @@ export interface DeveloperCredit {
   readonly website: string;
   readonly github: string;
   readonly email: string;
+  readonly discogs: string;
 }
 
 export interface AppConfig {
@@ -17,6 +18,8 @@ export interface AppConfig {
   readonly tagline: string;
   readonly origin: string;
   readonly tracksEndpoint: string;
+  readonly filmsEndpoint: string;
+  readonly musicEndpoint: string;
   readonly social: readonly SocialLink[];
   readonly developer: DeveloperCredit;
 }
@@ -28,13 +31,17 @@ export const defaultAppConfig: AppConfig = {
   tagline: 'Dark piano and cinematic soundscapes',
   origin: 'https://roarofthewaves.com',
   tracksEndpoint: 'assets/data/tracks.json',
+  filmsEndpoint: 'assets/data/coordinates-films.json',
+  musicEndpoint: 'assets/data/coordinates-music.json',
   social: [
     { label: 'SoundCloud', href: 'https://soundcloud.com/the_mysterious_stranger90' },
+    { label: 'Discogs', href: 'https://www.discogs.com/artist/18169269-Roar-of-the-Waves' },
   ],
   developer: {
     name: 'Bohdan Harabadzhyu (Bogdan Garabagiu)',
     website: 'https://bohdan-harabadzhyu-homepage.vercel.app/',
     github: 'https://github.com/TheMysteriousStranger90',
     email: 'bohdan_harabadzhyu@outlook.com',
+    discogs: 'https://www.discogs.com/artist/18169272-Bogdan-Garabagiu',
   },
 };

@@ -13,6 +13,7 @@ export interface Dictionary {
   readonly nav: {
     readonly home: string;
     readonly music: string;
+    readonly coordinates: string;
     readonly about: string;
   };
   readonly header: {
@@ -35,6 +36,18 @@ export interface Dictionary {
     readonly eyebrow: string;
     readonly title: string;
     readonly note: string;
+    readonly loading: string;
+    readonly error: string;
+    readonly empty: string;
+  };
+  readonly coordinates: {
+    readonly eyebrow: string;
+    readonly title: string;
+    readonly note: string;
+    readonly filmsHeading: string;
+    readonly musicHeading: string;
+    readonly literatureHeading: string;
+    readonly comingSoon: string;
     readonly loading: string;
     readonly error: string;
     readonly empty: string;
@@ -69,6 +82,7 @@ export interface Dictionary {
   readonly seo: {
     readonly home: { readonly title: string; readonly description: string };
     readonly music: { readonly title: string; readonly description: string };
+    readonly coordinates: { readonly title: string; readonly description: string };
     readonly about: { readonly title: string; readonly description: string };
   };
 }
@@ -78,6 +92,7 @@ export const translations: Record<Lang, Dictionary> = {
     nav: {
       home: 'Home',
       music: 'Music',
+      coordinates: 'Coordinates',
       about: 'About',
     },
     header: {
@@ -99,10 +114,22 @@ export const translations: Record<Lang, Dictionary> = {
     music: {
       eyebrow: 'Discography',
       title: 'Music',
-      note: 'Every release below stands on its own as a single, not a chapter of something larger. A full-length album may follow later — once enough of these statements have gathered to form one larger whole.',
+      note: 'Every release below stands on its own as a single, not a chapter of something larger. Each one is arranged and produced entirely at home — no live takes, no professional studio, just a simple MIDI keyboard, MuseScore Studio, and Ableton Live. A full-length album may follow later, once enough of these statements have gathered to form one larger whole.',
       loading: 'Loading…',
       error: 'The catalogue could not be loaded right now.',
       empty: 'No tracks published yet.',
+    },
+    coordinates: {
+      eyebrow: 'Points of reference',
+      title: 'Coordinates',
+      note: 'A personal map of my favorite works. These are the films, books, and music that I deeply resonate with and that directly inspired me to create.',
+      filmsHeading: 'Cinema',
+      musicHeading: 'Music',
+      literatureHeading: 'Literature',
+      comingSoon: 'Coming soon.',
+      loading: 'Loading…',
+      error: 'The list could not be loaded right now.',
+      empty: 'Nothing here yet.',
     },
     about: {
       eyebrow: 'About',
@@ -114,7 +141,7 @@ export const translations: Record<Lang, Dictionary> = {
       paragraph1:
         'Roar of the Waves is a one-man musical project where sound transcends mere composition to become a vessel for storytelling and quiet catharsis. Striving to blend the atmospheric touch of modern neoclassical music with the passionate depth of romanticism, the project paints poetic narratives through the prism of dark piano and cinematic soundscapes.',
       paragraph2:
-        "For the creator behind Roar of the Waves, music is not a profession, but a vital way to speak when words fall short. The project's sonic architecture is an attempt to bridge two distant musical worlds that have deeply shaped its creator: the heavy, expressive grandeur of Russian classical music (S. Rachmaninoff, A. Scriabin, S. Prokofiev, A. Glazunov, among others) and the nostalgic, melancholic film scores of 1960s and 1970s French and Italian cinema (François de Roubaix, Philippe Sarde, Ennio Morricone, Franco Mannino, and many more).",
+        "For the creator behind Roar of the Waves, music is not a profession, but a vital way to speak when words fall short. His only formal musical training is six years of private piano lessons at a local music school, alongside a short period playing in a gothic metal band. Those years left their mark, becoming the soil for a later attempt to bridge two distant musical worlds that have deeply shaped its creator: the heavy, expressive grandeur of Russian classical music (Sergei Rachmaninoff, Alexander Scriabin, Sergei Prokofiev, Alexander Glazunov, among others) and the nostalgic, melancholic film scores of 1960s and 1970s French and Italian cinema (François de Roubaix, Philippe Sarde, Ennio Morricone, Franco Mannino, and many more).",
     },
     shared: {
       everyTrackStory:
@@ -144,6 +171,11 @@ export const translations: Record<Lang, Dictionary> = {
         description:
           'The singles of Roar of the Waves — neoclassical piano and cinematic soundscapes, released one self-contained story at a time.',
       },
+      coordinates: {
+        title: 'Coordinates',
+        description:
+          'The films behind Roar of the Waves — a personal map of the cinema that shaped the sound of the project.',
+      },
       about: {
         title: 'About',
         description:
@@ -155,6 +187,7 @@ export const translations: Record<Lang, Dictionary> = {
     nav: {
       home: 'Главная',
       music: 'Музыка',
+      coordinates: 'Координаты',
       about: 'О проекте',
     },
     header: {
@@ -176,10 +209,22 @@ export const translations: Record<Lang, Dictionary> = {
     music: {
       eyebrow: 'Дискография',
       title: 'Музыка',
-      note: 'Каждый релиз ниже существует сам по себе как сингл, а не глава чего-то большего. Полноформатный альбом может появиться позже — когда таких высказываний накопится достаточно, чтобы сложить из них одно большое целое.',
+      note: 'Каждый релиз ниже существует сам по себе как сингл, а не глава чего-то большего. Каждый трек целиком пишется и сводится дома — без живых записей и профессиональной студии, только простая MIDI-клавиатура, MuseScore Studio и Ableton Live. Полноформатный альбом может появиться позже — когда таких высказываний накопится достаточно, чтобы сложить из них одно большое целое.',
       loading: 'Загрузка…',
       error: 'Не удалось загрузить каталог прямо сейчас.',
       empty: 'Треки пока не опубликованы.',
+    },
+    coordinates: {
+      eyebrow: 'Точки отсчёта',
+      title: 'Координаты',
+      note: 'Личная карта моих любимых произведений. Это фильмы, книги и музыка, которые мне по-настоящему близки и которые напрямую вдохновили меня на творчество.',
+      filmsHeading: 'Кино',
+      musicHeading: 'Музыка',
+      literatureHeading: 'Литература',
+      comingSoon: 'Скоро здесь появится список.',
+      loading: 'Загрузка…',
+      error: 'Не удалось загрузить список прямо сейчас.',
+      empty: 'Здесь пока пусто.',
     },
     about: {
       eyebrow: 'О проекте',
@@ -191,7 +236,7 @@ export const translations: Record<Lang, Dictionary> = {
       paragraph1:
         'Roar of the Waves — это сольный музыкальный проект, в котором звук выходит за рамки простой композиции и становится способом рассказывать истории и находить тихое очищение. Стремясь соединить атмосферность современной неоклассики со страстной глубиной романтизма, проект рисует поэтичные образы через призму тёмного фортепиано и кинематографичных саундскейпов.',
       paragraph2:
-        'Для создателя Roar of the Waves музыка — не профессия, а насущный способ говорить тогда, когда не хватает слов. Звуковая архитектура проекта — это попытка соединить два далёких музыкальных мира, глубоко повлиявших на его автора: тяжёлое, выразительное величие русской классической музыки (С. Рахманинов, А. Скрябин, С. Прокофьев, А. Глазунов и другие) и ностальгичные, меланхоличные саундтреки французского и итальянского кино 1960-х и 1970-х годов (Франсуа де Рубэ, Филипп Сард, Эннио Морриконе, Франко Маннино и многие другие).',
+        'Для создателя Roar of the Waves музыка — не профессия, а насущный способ говорить тогда, когда не хватает слов. Его единственное формальное музыкальное образование — шесть лет индивидуальных занятий по классу фортепиано в местной музыкальной школе, наряду с недолгим периодом игры в готик-метал-группе. Те годы оставили свой след, став почвой для более поздней попытки соединить два далёких музыкальных мира, глубоко повлиявших на его автора: тяжёлое, выразительное величие русской классической музыки (Сергей Рахманинов, Александр Скрябин, Сергей Прокофьев, Александр Глазунов и другие) и ностальгичные, меланхоличные саундтреки французского и итальянского кино 1960-х и 1970-х годов (Франсуа де Рубэ, Филипп Сард, Эннио Морриконе, Франко Маннино и многие другие).',
     },
     shared: {
       everyTrackStory:
@@ -220,6 +265,11 @@ export const translations: Record<Lang, Dictionary> = {
         title: 'Музыка',
         description:
           'Синглы Roar of the Waves — неоклассическое фортепиано и кинематографичные саундскейпы, выходящие по одной самостоятельной истории за раз.',
+      },
+      coordinates: {
+        title: 'Координаты',
+        description:
+          'Фильмы, стоящие за Roar of the Waves, — личная карта кино, определившего звучание проекта.',
       },
       about: {
         title: 'О проекте',
