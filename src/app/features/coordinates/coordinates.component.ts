@@ -1,9 +1,11 @@
 import { ChangeDetectionStrategy, Component, effect, inject, signal } from '@angular/core';
 
+import { BooksService } from '@core/services/books.service';
 import { FilmsService } from '@core/services/films.service';
 import { MusicReleasesService } from '@core/services/music-releases.service';
 import { LanguageService } from '@core/services/language.service';
 import { SeoService } from '@core/services/seo.service';
+import { BookShelf } from '@core/models/book.model';
 import { RevealOnScrollDirective } from '@shared/directives/reveal-on-scroll.directive';
 
 type Category = 'cinema' | 'music' | 'literature';
@@ -76,7 +78,28 @@ type Category = 'cinema' | 'music' | 'literature';
               }
             }
             @case ('literature') {
-              <p class="placeholder-note" rotwReveal>{{ t().coordinates.comingSoon }}</p>
+              @if (books.isLoading()) {
+                <p class="state">{{ t().coordinates.loading }}</p>
+              } @else if (books.hasError()) {
+                <p class="state" role="alert">{{ t().coordinates.error }}</p>
+              } @else if (books.byShelf().length === 0) {
+                <p class="state">{{ t().coordinates.empty }}</p>
+              } @else {
+                @for (group of books.byShelf(); track group.shelf) {
+                  <div class="decade" rotwReveal>
+                    <h2 class="decade__label">{{ shelfLabel(group.shelf) }}</h2>
+
+                    <ul class="film-list">
+                      @for (book of group.books; track book.id) {
+                        <li class="book-row">
+                          <span class="book-row__title">{{ book.title }}</span>
+                          <span class="book-row__author">{{ book.author }}</span>
+                        </li>
+                      }
+                    </ul>
+                  </div>
+                }
+              }
             }
           }
         </div>
@@ -182,12 +205,26 @@ type Category = 'cinema' | 'music' | 'literature';
       padding-block: 0.6rem;
     }
 
-    .placeholder-note {
+    .book-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      padding-block: 0.6rem;
+    }
+
+    .book-row__title {
       font-family: var(--font-display);
-      font-style: italic;
       font-size: var(--step-0);
+      font-weight: 300;
+      line-height: 1.3;
+      color: var(--c-ink);
+    }
+
+    .book-row__author {
+      font-family: var(--font-ui);
+      font-size: var(--step--1);
+      letter-spacing: 0.08em;
       color: var(--c-mute);
-      padding-block: var(--space-m);
     }
 
     @media (max-width: 32rem) {
@@ -199,6 +236,7 @@ type Category = 'cinema' | 'music' | 'literature';
 export class CoordinatesComponent {
   protected readonly films = inject(FilmsService);
   protected readonly music = inject(MusicReleasesService);
+  protected readonly books = inject(BooksService);
   private readonly seo = inject(SeoService);
 
   protected readonly lang = inject(LanguageService);
@@ -209,6 +247,7 @@ export class CoordinatesComponent {
   constructor() {
     this.films.load();
     this.music.load();
+    this.books.load();
 
     effect(() => {
       const dict = this.t();
@@ -227,5 +266,9 @@ export class CoordinatesComponent {
 
   protected decadeLabel(decade: number): string {
     return this.lang.lang() === 'ru' ? `${decade}-е` : `${decade}s`;
+  }
+
+  protected shelfLabel(shelf: BookShelf): string {
+    return this.t().coordinates.shelves[shelf];
   }
 }

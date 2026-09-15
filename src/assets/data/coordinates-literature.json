@@ -1,0 +1,604 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "author": "Данте Алигьери",
+      "title": "Божественная комедия",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 2,
+      "author": "Джованни Боккаччо",
+      "title": "Декамерон",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 3,
+      "author": "Мильтон, Дж.",
+      "title": "Потерянный рай",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 4,
+      "author": "Кребийон-сын",
+      "title": "Заблуждения сердца и ума",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 5,
+      "author": "Шодерло де Лакло, П.",
+      "title": "Опасные связи",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 6,
+      "author": "Гёте, И. В.",
+      "title": "Страдания юного Вертера",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 7,
+      "author": "Гёте, И. В.",
+      "title": "Фауст",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 8,
+      "author": "Байрон, Дж. Г.",
+      "title": "Паломничество Чайльд-Гарольда",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 9,
+      "author": "Байрон, Дж. Г.",
+      "title": "Корсар",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 10,
+      "author": "Шопенгауэр, А.",
+      "title": "Мир как воля и представление",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 11,
+      "author": "Стендаль",
+      "title": "Красное и чёрное",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 12,
+      "author": "Бальзак, О. де",
+      "title": "Шагреневая кожа",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 13,
+      "author": "Бальзак, О. де",
+      "title": "Тридцатилетняя женщина",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 14,
+      "author": "Бальзак, О. де",
+      "title": "Блеск и нищета куртизанок",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 15,
+      "author": "Флобер, Г.",
+      "title": "Госпожа Бовари",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 16,
+      "author": "Стокер, Б.",
+      "title": "Дракула",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 17,
+      "author": "Мопассан, Г. де",
+      "title": "Милый друг",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 18,
+      "author": "Джойс, Дж.",
+      "title": "Портрет художника в юности",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 19,
+      "author": "Цвейг, С.",
+      "title": "Письмо незнакомки",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 20,
+      "author": "Ремарк, Э. М.",
+      "title": "Три товарища",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 21,
+      "author": "Лавкрафт, Г. Ф.",
+      "title": "Зов Ктулху",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 22,
+      "author": "Лавкрафт, Г. Ф.",
+      "title": "Тень над Иннсмутом",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 23,
+      "author": "Лавкрафт, Г. Ф.",
+      "title": "За гранью времён",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 24,
+      "author": "Драйзер, Т.",
+      "title": "Финансист",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 25,
+      "author": "Драйзер, Т.",
+      "title": "Титан",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 26,
+      "author": "Драйзер, Т.",
+      "title": "Стоик",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 27,
+      "author": "Драйзер, Т.",
+      "title": "Американская трагедия",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 28,
+      "author": "Камю, А.",
+      "title": "Посторонний",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 29,
+      "author": "Камю, А.",
+      "title": "Чума",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 30,
+      "author": "Камю, А.",
+      "title": "Бунтующий человек",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 31,
+      "author": "Моравиа, А.",
+      "title": "Презрение",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 32,
+      "author": "Моравиа, А.",
+      "title": "Скука",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 33,
+      "author": "Олдингтон, Р.",
+      "title": "Смерть героя",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 34,
+      "author": "Олдингтон, Р.",
+      "title": "Все люди враги",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 35,
+      "author": "Моруа, А.",
+      "title": "Байрон",
+      "shelf": "europeanAmerican"
+    },
+    {
+      "id": 36,
+      "author": "Грибоедов, А. С.",
+      "title": "Горе от ума",
+      "shelf": "russian"
+    },
+    {
+      "id": 37,
+      "author": "Пушкин, А. С.",
+      "title": "Евгений Онегин",
+      "shelf": "russian"
+    },
+    {
+      "id": 38,
+      "author": "Пушкин, А. С.",
+      "title": "Дубровский",
+      "shelf": "russian"
+    },
+    {
+      "id": 39,
+      "author": "Лермонтов, М. Ю.",
+      "title": "Герой нашего времени",
+      "shelf": "russian"
+    },
+    {
+      "id": 40,
+      "author": "Лермонтов, М. Ю.",
+      "title": "Мцыри",
+      "shelf": "russian"
+    },
+    {
+      "id": 41,
+      "author": "Лермонтов, М. Ю.",
+      "title": "Маскарад",
+      "shelf": "russian"
+    },
+    {
+      "id": 42,
+      "author": "Лермонтов, М. Ю.",
+      "title": "Демон",
+      "shelf": "russian"
+    },
+    {
+      "id": 43,
+      "author": "Гоголь, Н. В.",
+      "title": "Ревизор",
+      "shelf": "russian"
+    },
+    {
+      "id": 44,
+      "author": "Гоголь, Н. В.",
+      "title": "Мертвые души",
+      "shelf": "russian"
+    },
+    {
+      "id": 45,
+      "author": "Одоевский, В. Ф.",
+      "title": "Русские ночи",
+      "shelf": "russian"
+    },
+    {
+      "id": 46,
+      "author": "Толстой, А. К.",
+      "title": "Упырь",
+      "shelf": "russian"
+    },
+    {
+      "id": 47,
+      "author": "Толстой, А. К.",
+      "title": "Встреча через триста лет",
+      "shelf": "russian"
+    },
+    {
+      "id": 48,
+      "author": "Тургенев, И. С.",
+      "title": "Дневник лишнего человека",
+      "shelf": "russian"
+    },
+    {
+      "id": 49,
+      "author": "Тургенев, И. С.",
+      "title": "Рудин",
+      "shelf": "russian"
+    },
+    {
+      "id": 50,
+      "author": "Тургенев, И. С.",
+      "title": "Дворянское гнездо",
+      "shelf": "russian"
+    },
+    {
+      "id": 51,
+      "author": "Тургенев, И. С.",
+      "title": "Отцы и дети",
+      "shelf": "russian"
+    },
+    {
+      "id": 52,
+      "author": "Достоевский, Ф. М.",
+      "title": "Униженные и оскорблённые",
+      "shelf": "russian"
+    },
+    {
+      "id": 53,
+      "author": "Достоевский, Ф. М.",
+      "title": "Записки из Мёртвого дома",
+      "shelf": "russian"
+    },
+    {
+      "id": 54,
+      "author": "Достоевский, Ф. М.",
+      "title": "Преступление и наказание",
+      "shelf": "russian"
+    },
+    {
+      "id": 55,
+      "author": "Достоевский, Ф. М.",
+      "title": "Идиот",
+      "shelf": "russian"
+    },
+    {
+      "id": 56,
+      "author": "Достоевский, Ф. М.",
+      "title": "Бесы",
+      "shelf": "russian"
+    },
+    {
+      "id": 57,
+      "author": "Достоевский, Ф. М.",
+      "title": "Братья Карамазовы",
+      "shelf": "russian"
+    },
+    {
+      "id": 58,
+      "author": "Достоевский, Ф. М.",
+      "title": "Дневник писателя",
+      "shelf": "russian"
+    },
+    {
+      "id": 59,
+      "author": "Толстой, Л. Н.",
+      "title": "Севастопольские рассказы",
+      "shelf": "russian"
+    },
+    {
+      "id": 60,
+      "author": "Толстой, Л. Н.",
+      "title": "Два гусара",
+      "shelf": "russian"
+    },
+    {
+      "id": 61,
+      "author": "Толстой, Л. Н.",
+      "title": "Война и мир",
+      "shelf": "russian"
+    },
+    {
+      "id": 62,
+      "author": "Толстой, Л. Н.",
+      "title": "Анна Каренина",
+      "shelf": "russian"
+    },
+    {
+      "id": 63,
+      "author": "Толстой, Л. Н.",
+      "title": "Смерть Ивана Ильича",
+      "shelf": "russian"
+    },
+    {
+      "id": 64,
+      "author": "Толстой, Л. Н.",
+      "title": "Крейцерова соната",
+      "shelf": "russian"
+    },
+    {
+      "id": 65,
+      "author": "Толстой, Л. Н.",
+      "title": "Власть тьмы",
+      "shelf": "russian"
+    },
+    {
+      "id": 66,
+      "author": "Гончаров, И. А.",
+      "title": "Обломов",
+      "shelf": "russian"
+    },
+    {
+      "id": 67,
+      "author": "Чехов, А. П.",
+      "title": "Дуэль",
+      "shelf": "russian"
+    },
+    {
+      "id": 68,
+      "author": "Чехов, А. П.",
+      "title": "Дядя Ваня",
+      "shelf": "russian"
+    },
+    {
+      "id": 69,
+      "author": "Чехов, А. П.",
+      "title": "Три сестры",
+      "shelf": "russian"
+    },
+    {
+      "id": 70,
+      "author": "Чехов, А. П.",
+      "title": "Вишнёвый сад",
+      "shelf": "russian"
+    },
+    {
+      "id": 71,
+      "author": "Гаршин, В. М.",
+      "title": "Красный цветок",
+      "shelf": "russian"
+    },
+    {
+      "id": 72,
+      "author": "Горький, М.",
+      "title": "На дне",
+      "shelf": "russian"
+    },
+    {
+      "id": 73,
+      "author": "Бунин, И. А.",
+      "title": "Темные аллеи",
+      "shelf": "russian"
+    },
+    {
+      "id": 74,
+      "author": "Андреев, Л. Н.",
+      "title": "Дневник Сатаны",
+      "shelf": "russian"
+    },
+    {
+      "id": 75,
+      "author": "Куприн, А. И.",
+      "title": "Гранатовый браслет",
+      "shelf": "russian"
+    },
+    {
+      "id": 76,
+      "author": "Куприн, А. И.",
+      "title": "Юнкера",
+      "shelf": "russian"
+    },
+    {
+      "id": 77,
+      "author": "Булгаков, М. А.",
+      "title": "Белая гвардия",
+      "shelf": "russian"
+    },
+    {
+      "id": 78,
+      "author": "Булгаков, М. А.",
+      "title": "Записки юного врача",
+      "shelf": "russian"
+    },
+    {
+      "id": 79,
+      "author": "Булгаков, М. А.",
+      "title": "Морфий",
+      "shelf": "russian"
+    },
+    {
+      "id": 80,
+      "author": "Булгаков, М. А.",
+      "title": "Собачье сердце",
+      "shelf": "russian"
+    },
+    {
+      "id": 81,
+      "author": "Булгаков, М. А.",
+      "title": "Дни Турбиных",
+      "shelf": "russian"
+    },
+    {
+      "id": 82,
+      "author": "Булгаков, М. А.",
+      "title": "Бег",
+      "shelf": "russian"
+    },
+    {
+      "id": 83,
+      "author": "Гумилёв, Н. С.",
+      "title": "Записки кавалериста",
+      "shelf": "russian"
+    },
+    {
+      "id": 84,
+      "author": "Грин, А. С.",
+      "title": "Алые паруса",
+      "shelf": "russian"
+    },
+    {
+      "id": 85,
+      "author": "Богомолов, В. О.",
+      "title": "Момент истины (В августе сорок четвертого...)",
+      "shelf": "russian"
+    },
+    {
+      "id": 86,
+      "author": "Арораа Гаурав, Чилберто Джеффри",
+      "title": "Паттерны проектирования для C# и платформы .NET Core",
+      "shelf": "technical"
+    },
+    {
+      "id": 87,
+      "author": "Брукшир Дж. Гленн, Брилов Деннис",
+      "title": "Компьютерные науки. Базовый курс",
+      "shelf": "technical"
+    },
+    {
+      "id": 88,
+      "author": "Добовицки Нир",
+      "title": "C# Concurrency. Асинхронное программирование и многопоточность",
+      "shelf": "technical"
+    },
+    {
+      "id": 89,
+      "author": "Лафоре Р.",
+      "title": "Объектно-ориентированное программирование в C++",
+      "shelf": "technical"
+    },
+    {
+      "id": 90,
+      "author": "Лок Эндрю",
+      "title": "ASP.NET Core в действии",
+      "shelf": "technical"
+    },
+    {
+      "id": 91,
+      "author": "Руссинович М., Соломон Д., Ионеску А., Йосифович П.",
+      "title": "Внутреннее устройство Windows",
+      "shelf": "technical"
+    },
+    {
+      "id": 92,
+      "author": "Симан Марк, Дерсен Стивен ван",
+      "title": "Внедрение зависимостей на платформе .NET",
+      "shelf": "technical"
+    },
+    {
+      "id": 93,
+      "author": "Скит Джон",
+      "title": "С# для профессионалов: тонкости программирования",
+      "shelf": "technical"
+    },
+    {
+      "id": 94,
+      "author": "Смит Дж. П.",
+      "title": "Entity Framework Core в действии",
+      "shelf": "technical"
+    },
+    {
+      "id": 95,
+      "author": "Таненбаум Э., Бос Х.",
+      "title": "Современные операционные системы",
+      "shelf": "technical"
+    },
+    {
+      "id": 96,
+      "author": "Таненбаум Э., Остин Т.",
+      "title": "Архитектура компьютера",
+      "shelf": "technical"
+    },
+    {
+      "id": 97,
+      "author": "Таненбаум Э., Уэзеролл Д.",
+      "title": "Компьютерные сети",
+      "shelf": "technical"
+    },
+    {
+      "id": 98,
+      "author": "Jamro Marcin",
+      "title": "C# Data Structures and Algorithms",
+      "shelf": "technical"
+    },
+    {
+      "id": 99,
+      "author": "Marcotte Carl-Hugo",
+      "title": "Architecting ASP.NET Core Applications",
+      "shelf": "technical"
+    },
+    {
+      "id": 100,
+      "author": "Yan Xiaodi",
+      "title": "Web API Development with ASP.NET Core 8",
+      "shelf": "technical"
+    }
+  ]
+}
