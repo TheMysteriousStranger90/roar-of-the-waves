@@ -20,6 +20,7 @@ export interface AppConfig {
   readonly tracksEndpoint: string;
   readonly filmsEndpoint: string;
   readonly musicEndpoint: string;
+  readonly literatureEndpoint: string;
   readonly social: readonly SocialLink[];
   readonly developer: DeveloperCredit;
 }
@@ -33,6 +34,7 @@ export const defaultAppConfig: AppConfig = {
   tracksEndpoint: 'assets/data/tracks.json',
   filmsEndpoint: 'assets/data/coordinates-films.json',
   musicEndpoint: 'assets/data/coordinates-music.json',
+  literatureEndpoint: 'assets/data/coordinates-literature.json',
   social: [
     { label: 'SoundCloud', href: 'https://soundcloud.com/the_mysterious_stranger90' },
     { label: 'Discogs', href: 'https://www.discogs.com/artist/18169269-Roar-of-the-Waves' },

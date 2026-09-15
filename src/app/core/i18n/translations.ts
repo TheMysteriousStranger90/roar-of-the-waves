@@ -47,7 +47,12 @@ export interface Dictionary {
     readonly filmsHeading: string;
     readonly musicHeading: string;
     readonly literatureHeading: string;
-    readonly comingSoon: string;
+    /** Section labels for the literature tab, keyed by `BookShelf`. */
+    readonly shelves: {
+      readonly europeanAmerican: string;
+      readonly russian: string;
+      readonly technical: string;
+    };
     readonly loading: string;
     readonly error: string;
     readonly empty: string;
@@ -126,7 +131,11 @@ export const translations: Record<Lang, Dictionary> = {
       filmsHeading: 'Cinema',
       musicHeading: 'Music',
       literatureHeading: 'Literature',
-      comingSoon: 'Coming soon.',
+      shelves: {
+        europeanAmerican: 'European and American literature',
+        russian: 'Russian literature',
+        technical: 'Technical literature',
+      },
       loading: 'Loading…',
       error: 'The list could not be loaded right now.',
       empty: 'Nothing here yet.',
@@ -174,7 +183,7 @@ export const translations: Record<Lang, Dictionary> = {
       coordinates: {
         title: 'Coordinates',
         description:
-          'The films behind Roar of the Waves — a personal map of the cinema that shaped the sound of the project.',
+          'The films, records and books behind Roar of the Waves — a personal map of the works that shaped the sound of the project.',
       },
       about: {
         title: 'About',
@@ -221,7 +230,11 @@ export const translations: Record<Lang, Dictionary> = {
       filmsHeading: 'Кино',
       musicHeading: 'Музыка',
       literatureHeading: 'Литература',
-      comingSoon: 'Скоро здесь появится список.',
+      shelves: {
+        europeanAmerican: 'Европейская и американская литература',
+        russian: 'Русская литература',
+        technical: 'Техническая литература',
+      },
       loading: 'Загрузка…',
       error: 'Не удалось загрузить список прямо сейчас.',
       empty: 'Здесь пока пусто.',
@@ -269,7 +282,7 @@ export const translations: Record<Lang, Dictionary> = {
       coordinates: {
         title: 'Координаты',
         description:
-          'Фильмы, стоящие за Roar of the Waves, — личная карта кино, определившего звучание проекта.',
+          'Фильмы, пластинки и книги, стоящие за Roar of the Waves, — личная карта произведений, определивших звучание проекта.',
       },
       about: {
         title: 'О проекте',
