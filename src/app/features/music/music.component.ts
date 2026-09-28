@@ -15,9 +15,10 @@ import { TrackCardComponent } from '@shared/components/track-card/track-card.com
       <div class="shell">
         <p class="eyebrow">{{ t().music.eyebrow }}</p>
         <h1 class="page-title display">{{ t().music.title }}</h1>
-        <p class="note prose">
-          {{ t().music.note }}
-        </p>
+        <div class="note prose">
+          <p>{{ t().music.note }}</p>
+          <p>{{ t().music.noteAlbum }}</p>
+        </div>
 
         @if (tracks.isLoading()) {
           <p class="state">{{ t().music.loading }}</p>
@@ -45,6 +46,10 @@ import { TrackCardComponent } from '@shared/components/track-card/track-card.com
       margin-bottom: var(--space-xl);
       padding-bottom: var(--space-l);
       border-bottom: 1px solid var(--c-line);
+    }
+
+    .note p + p {
+      margin-top: var(--space-m);
     }
 
     .state { color: var(--c-mute); padding-block: var(--space-l); }
