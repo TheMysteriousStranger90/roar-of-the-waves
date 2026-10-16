@@ -37,6 +37,7 @@ export const defaultAppConfig: AppConfig = {
   literatureEndpoint: 'assets/data/coordinates-literature.json',
   social: [
     { label: 'SoundCloud', href: 'https://soundcloud.com/the_mysterious_stranger90' },
+    { label: 'YouTube', href: 'https://www.youtube.com/channel/UCVDhx9HL3iWCJN8e9kteXyg' },
     { label: 'Discogs', href: 'https://www.discogs.com/artist/18169269-Roar-of-the-Waves' },
   ],
   developer: {

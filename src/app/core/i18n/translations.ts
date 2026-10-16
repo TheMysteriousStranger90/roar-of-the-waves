@@ -156,7 +156,7 @@ export const translations: Record<Lang, Dictionary> = {
     },
     shared: {
       everyTrackStory:
-        'Every track is a self-contained story — a reflection on solitude, the beauty of fleeting moments, and the fragile stillness that follows a long journey.',
+        'Every track is a self-contained story — a reflection on solitude, the beauty of fleeting moments, and the fragile stillness that settles after heavy thoughts.',
     },
     trackCard: {
       listenOn: 'Listen on SoundCloud ↗',
@@ -256,7 +256,7 @@ export const translations: Record<Lang, Dictionary> = {
     },
     shared: {
       everyTrackStory:
-        'Каждый трек — самостоятельная история: размышление об одиночестве, красоте мимолётных мгновений и хрупкой тишине, наступающей после долгого пути.',
+        'Каждый трек — самостоятельная история: размышление об одиночестве, красоте мимолётных мгновений и хрупкой тишине, воцаряющейся после тяжёлых раздумий.',
     },
     trackCard: {
       listenOn: 'Слушать на SoundCloud ↗',
