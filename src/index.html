@@ -1,21 +1,29 @@
 <!doctype html>
 <html lang="en" data-theme="dark">
-  <head>
-    <meta charset="utf-8" />
-    <title>Roar of the Waves</title>
-    <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#0a0a0a" />
-    <link rel="icon" href="favicon.ico" sizes="any" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="apple-touch-icon" href="apple-touch-icon-180.png" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400;500&display=swap"
-    />
-  </head>
-  <body>
-    <rotw-root></rotw-root>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>Roar of the Waves</title>
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="apple-touch-icon-180.png" />
+  <!-- Fonts are self-hosted (see src/styles/_fonts.scss). Preload only what the first screen uses. -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/cormorant-garamond-latin-300-normal.woff2" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/cormorant-garamond-latin-400-normal.woff2" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/inter-latin-400-normal.woff2" />
+  <!-- LCP image of the home page: discoverable from the HTML instead of after Angular boots -->
+  <link
+    rel="preload"
+    as="image"
+    type="image/avif"
+    fetchpriority="high"
+    imagesrcset="/assets/images/hero/hero-640.avif 640w, /assets/images/hero/hero-1024.avif 1024w, /assets/images/hero/hero-1440.avif 1440w, /assets/images/hero/hero-2000.avif 2000w"
+    imagesizes="100vw"
+  />
+</head>
+<body>
+<rotw-root></rotw-root>
+</body>
 </html>

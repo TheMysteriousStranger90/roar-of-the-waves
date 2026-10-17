@@ -1,11 +1,11 @@
 import {Routes} from '@angular/router';
+import {HomeComponent} from '@features/home/home.component';
 
 export const routes: Routes = [
   {
     path: '',
     title: 'Roar of the Waves',
-    loadComponent: () =>
-      import('@features/home/home.component').then((m) => m.HomeComponent),
+    component: HomeComponent,
   },
   {
     path: 'music',

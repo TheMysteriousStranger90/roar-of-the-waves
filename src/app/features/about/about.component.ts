@@ -185,8 +185,8 @@ export class AboutComponent {
   protected readonly t = this.lang.dict;
 
   protected readonly photos: readonly string[] = [
-    'assets/images/portrait.jpg',
-    'assets/images/portrait-2.jpg',
+    'assets/images/portrait.webp',
+    'assets/images/portrait-2.webp',
   ];
 
   protected readonly activeIndex = signal(0);
