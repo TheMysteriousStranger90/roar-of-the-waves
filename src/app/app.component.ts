@@ -18,6 +18,9 @@ import { TracksService } from '@core/services/tracks.service';
     </main>
     <rotw-site-footer />
   `,
+  styles: `
+    main { min-height: 100svh; }
+  `,
 })
 export class AppComponent {
   private readonly tracks = inject(TracksService);

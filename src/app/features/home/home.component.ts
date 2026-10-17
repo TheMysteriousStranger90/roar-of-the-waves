@@ -14,13 +14,38 @@ import { RevealOnScrollDirective } from '@shared/directives/reveal-on-scroll.dir
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section class="hero">
-      <img
-        class="hero__bg"
-        src="assets/images/aniva-lighthouse.jpg"
-        alt="A storm-worn lighthouse standing alone on rocks in the open sea"
-        loading="eager"
-        fetchpriority="high"
-      />
+      <picture>
+        <source
+          type="image/avif"
+          sizes="100vw"
+          srcset="
+            assets/images/hero/hero-640.avif 640w,
+            assets/images/hero/hero-1024.avif 1024w,
+            assets/images/hero/hero-1440.avif 1440w,
+            assets/images/hero/hero-2000.avif 2000w
+          "
+        />
+        <source
+          type="image/webp"
+          sizes="100vw"
+          srcset="
+            assets/images/hero/hero-640.webp 640w,
+            assets/images/hero/hero-1024.webp 1024w,
+            assets/images/hero/hero-1440.webp 1440w,
+            assets/images/hero/hero-2000.webp 2000w
+          "
+        />
+        <img
+          class="hero__bg"
+          src="assets/images/aniva-lighthouse.jpg"
+          width="2000"
+          height="1125"
+          alt="A storm-worn lighthouse standing alone on rocks in the open sea"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </picture>
       <div class="hero__scrim"></div>
       <div class="shell hero__content">
         <p class="eyebrow">{{ t().home.eyebrow }}</p>
