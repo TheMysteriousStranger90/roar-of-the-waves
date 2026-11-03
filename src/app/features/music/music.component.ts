@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, effect, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 import { LanguageService } from '@core/services/language.service';
 import { SeoService } from '@core/services/seo.service';
@@ -8,7 +9,7 @@ import { TrackCardComponent } from '@shared/components/track-card/track-card.com
 @Component({
   selector: 'rotw-music',
   standalone: true,
-  imports: [TrackCardComponent],
+  imports: [RouterLink, TrackCardComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section class="section">
@@ -18,6 +19,9 @@ import { TrackCardComponent } from '@shared/components/track-card/track-card.com
         <div class="note prose">
           <p>{{ t().music.note }}</p>
           <p>{{ t().music.noteAlbum }}</p>
+          <p>
+            <a class="note__link" routerLink="/ai-check">{{ t().aiCheck.musicLink }}</a>
+          </p>
         </div>
 
         @if (tracks.isLoading()) {
@@ -50,6 +54,18 @@ import { TrackCardComponent } from '@shared/components/track-card/track-card.com
 
     .note p + p {
       margin-top: var(--space-m);
+    }
+
+    .note__link {
+      font-family: var(--font-ui);
+      font-size: var(--step--1);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--c-line);
+      padding-bottom: 0.25rem;
+      transition: border-color var(--dur) var(--ease);
+
+      &:hover { border-color: var(--c-ink); }
     }
 
     .state { color: var(--c-mute); padding-block: var(--space-l); }

@@ -9,6 +9,15 @@ export type Lang = 'en' | 'ru';
 export const SUPPORTED_LANGS: readonly Lang[] = ['en', 'ru'];
 export const DEFAULT_LANG: Lang = 'en';
 
+export interface AiCheckTool {
+  readonly name: string;
+  readonly figure: string;
+  readonly figureNote: string;
+  readonly what: string;
+  readonly result: string;
+  readonly limits: string;
+}
+
 export interface Dictionary {
   readonly nav: {
     readonly home: string;
@@ -40,6 +49,51 @@ export interface Dictionary {
     readonly loading: string;
     readonly error: string;
     readonly empty: string;
+  };
+  readonly aiCheck: {
+    readonly musicLink: string;
+    readonly eyebrow: string;
+    readonly title: string;
+    readonly lede: string;
+    readonly checkedOn: string;
+    readonly tabsLabel: string;
+    readonly screenshotsLabel: string;
+    readonly lightbox: {
+      readonly dialog: string;
+      readonly close: string;
+      readonly previous: string;
+      readonly next: string;
+      readonly openOriginal: string;
+    };
+    readonly labels: {
+      readonly what: string;
+      readonly result: string;
+      readonly limits: string;
+    };
+    readonly openTool: string;
+    readonly deezer: AiCheckTool;
+    readonly wavespeed: AiCheckTool;
+    readonly aha: AiCheckTool;
+    readonly exiftools: AiCheckTool;
+    readonly captions: {
+      readonly deezerLibrary: string;
+      readonly deezerPlaylist: string;
+      readonly deezerResult: string;
+      readonly deezerShare: string;
+    };
+    readonly alts: {
+      readonly deezerLibrary: string;
+      readonly deezerPlaylist: string;
+      readonly deezerResult: string;
+      readonly deezerShare: string;
+      readonly wavespeed: string;
+      readonly aha: string;
+      readonly exiftools: string;
+    };
+    readonly readingTitle: string;
+    readonly reading: string;
+    readonly verifyTitle: string;
+    readonly verify: string;
   };
   readonly coordinates: {
     readonly eyebrow: string;
@@ -90,6 +144,7 @@ export interface Dictionary {
     readonly music: { readonly title: string; readonly description: string };
     readonly coordinates: { readonly title: string; readonly description: string };
     readonly about: { readonly title: string; readonly description: string };
+    readonly aiCheck: { readonly title: string; readonly description: string };
   };
 }
 
@@ -125,6 +180,75 @@ export const translations: Record<Lang, Dictionary> = {
       loading: 'Loading…',
       error: 'The catalogue could not be loaded right now.',
       empty: 'No tracks published yet.',
+    },
+    aiCheck: {
+      musicLink: 'Results of the AI check →',
+      eyebrow: 'Authenticity',
+      title: 'AI check',
+      tabsLabel: 'Checking services',
+      screenshotsLabel: 'Screenshots',
+      lightbox: {
+        dialog: 'Screenshot viewer',
+        close: 'Close',
+        previous: 'Previous screenshot',
+        next: 'Next screenshot',
+        openOriginal: 'Open original ↗',
+      },
+      lede: 'Solo piano made at home with a sample library is increasingly mistaken for AI output. Every track here is made by one person with a MIDI keyboard, MuseScore Studio and Ableton Live, as described above. To answer the question before it is asked, all five tracks were also run through four independent AI-music checks. None of them flagged a single track as AI-generated.',
+      checkedOn: 'Checks run on 2 and 3 November 2026. WaveSpeed, aha-music and ExifTools were given the lossless FLAC files; Deezer scanned the tracks as released on Deezer. The screenshots are shown in full, exactly as captured.',
+      labels: { what: 'What it checks', result: 'Result', limits: 'Limits' },
+      openTool: 'Open the tool ↗',
+      deezer: {
+        name: 'Deezer AI Music Detector',
+        figure: '0%',
+        figureNote: 'of the playlist flagged as AI',
+        what: 'Deezer’s own detector. Deezer says its detection technology targets fully AI-generated tracks from generators such as Suno and Udio, with 99.8% accuracy. All five tracks were put into one playlist and scanned together.',
+        result: 'The AI score is 0%: none of the five tracks was flagged as AI-generated.',
+        limits: 'The accuracy figure is Deezer’s own claim, and the tool is aimed at fully AI-generated music.',
+      },
+      wavespeed: {
+        name: 'WaveSpeed AI Music Detector',
+        figure: '0%',
+        figureNote: 'AI-generated likelihood, every track',
+        what: 'Analyses the audio itself, looking for the traces AI music generators leave in the sound. Each track was uploaded as a lossless FLAC file, so lossy compression could not distort the result. For tracks longer than 3:00, the tool analyses the first three minutes.',
+        result: 'Every track came back “Likely human-made”, with high confidence and a 0% AI-generated likelihood.',
+        limits: 'The tool itself calls its output “an estimate, not proof”.',
+      },
+      aha: {
+        name: 'aha-music AI Music Detector',
+        figure: '1.1–1.2%',
+        figureNote: 'AI probability, every track',
+        what: 'Analyses the uploaded audio file and estimates how likely it is to be AI-generated. It also reports which AI platform it suspects, if any, and scores the full track. Each track was uploaded as a lossless FLAC file. The free version allows three checks per day, so the five tracks were checked over two days.',
+        result: 'Every track came back as “Human-Made Music”: 1.1% AI for The Fatalist’s Path, Eternity and The Lighthouse by the Sea, and 1.2% for Dancing on the Embankment and Senza parole. The AI platform field reads “Human” and the recognition confidence is 95%.',
+        limits: 'The scores are small but not exactly 0%, so the verdict matters more than the number: the tool’s own verdict for every track is human-made. Like every detector, it gives an estimate, not proof.',
+      },
+      exiftools: {
+        name: 'ExifTools AI Music Checker',
+        figure: 'No marks',
+        figureNote: 'of AI music services in any file',
+        what: 'Reads the file’s metadata for the marks that AI music services leave (Suno, Udio, ElevenLabs and others) and for Content Credentials that declare AI generation.',
+        result: 'No AI marks and no Content Credentials in any of the five files. The tags show the track title, the artist Roar of the Waves and the FLAC encoder.',
+        limits: 'The weakest of the three on its own: as the tool says, services do not always tag their files and tags are easy to remove. It complements the audio analysis rather than replacing it.',
+      },
+      captions: {
+        deezerLibrary: 'Deezer: the “Roar of the Waves” playlist in the library (5 tracks)',
+        deezerPlaylist: 'Deezer: the five tracks in the scanned playlist',
+        deezerResult: 'Deezer: the AI score of the playlist',
+        deezerShare: 'Deezer: the shareable result card',
+      },
+      alts: {
+        deezerLibrary: 'Deezer library with the “Roar of the Waves” playlist of 5 tracks',
+        deezerPlaylist: 'The Deezer playlist with the five Roar of the Waves tracks that were scanned',
+        deezerResult: 'Deezer AI Music Detector result page showing an AI score of 0%',
+        deezerShare: 'Deezer result card: 0% of my music was detected as AI-generated',
+        wavespeed: 'WaveSpeed AI Music Detector result for “{title}”: 0% AI-generated likelihood, likely human-made, high confidence',
+        aha: 'aha-music AI Music Detector result for “{title}”: Human-Made Music, about 1% AI, 95% recognition confidence',
+        exiftools: 'ExifTools AI Music Checker result for “{title}”: no AI music marks found',
+      },
+      readingTitle: 'How to read this',
+      reading: 'No detector can prove who made a piece of music — the tools above say so themselves. What counts is that four different checks agree: a streaming service’s classifier, two separate analyses of the sound and an inspection of the file. The result also fits how the music is made, described at the top of this page. The occasional audio artifacts mentioned there come from limited mixing experience, not from a generator.',
+      verifyTitle: 'Check it yourself',
+      verify: 'Screenshots can be doubted, so the checks can be repeated by anyone with the tools linked above. Results on audio downloaded from streaming services may differ slightly, because heavy compression can affect audio analysis.',
     },
     coordinates: {
       eyebrow: 'Points of reference',
@@ -192,6 +316,11 @@ export const translations: Record<Lang, Dictionary> = {
         description:
           'The story behind Roar of the Waves: Russian romantic classicism meets 1960s–70s French and Italian film scores.',
       },
+      aiCheck: {
+        title: 'AI check',
+        description:
+          'Results of four independent AI-music checks (Deezer, WaveSpeed, aha-music, ExifTools) for the Roar of the Waves tracks, with full screenshots and an explanation of what they mean.',
+      },
     },
   },
   ru: {
@@ -225,6 +354,75 @@ export const translations: Record<Lang, Dictionary> = {
       loading: 'Загрузка…',
       error: 'Не удалось загрузить каталог прямо сейчас.',
       empty: 'Треки пока не опубликованы.',
+    },
+    aiCheck: {
+      musicLink: 'Результаты проверки на ИИ →',
+      eyebrow: 'Подлинность',
+      title: 'Проверка на ИИ',
+      tabsLabel: 'Сервисы проверки',
+      screenshotsLabel: 'Скриншоты',
+      lightbox: {
+        dialog: 'Просмотр скриншотов',
+        close: 'Закрыть',
+        previous: 'Предыдущий скриншот',
+        next: 'Следующий скриншот',
+        openOriginal: 'Открыть оригинал ↗',
+      },
+      lede: 'Сольное фортепиано, записанное дома с помощью библиотеки семплов, всё чаще принимают за результат работы ИИ. Каждый трек здесь создан одним человеком с помощью MIDI-клавиатуры, MuseScore Studio и Ableton Live, как описано выше. Чтобы ответить на вопрос ещё до того, как его зададут, все пять треков также прогнали через четыре независимые проверки на ИИ-музыку. Ни одна из них не отметила ни один трек как созданный ИИ.',
+      checkedOn: 'Проверки выполнены 2 и 3 ноября 2026 года. В WaveSpeed, aha-music и ExifTools загружались lossless-файлы FLAC; Deezer проверил треки в том виде, в каком они выпущены на Deezer. Скриншоты показаны полностью, как они были сделаны.',
+      labels: { what: 'Что проверяет', result: 'Результат', limits: 'Ограничения' },
+      openTool: 'Открыть сервис ↗',
+      deezer: {
+        name: 'Deezer AI Music Detector',
+        figure: '0%',
+        figureNote: 'плейлиста отмечено как ИИ',
+        what: 'Собственный детектор Deezer. По заявлению Deezer, их технология нацелена на полностью сгенерированные ИИ треки от таких генераторов, как Suno и Udio, и работает с точностью 99,8%. Все пять треков были собраны в один плейлист и проверены вместе.',
+        result: 'AI score — 0%: ни один из пяти треков не был отмечен как созданный ИИ.',
+        limits: 'Показатель точности — заявление самой Deezer, а инструмент рассчитан на полностью сгенерированную ИИ музыку.',
+      },
+      wavespeed: {
+        name: 'WaveSpeed AI Music Detector',
+        figure: '0%',
+        figureNote: 'вероятность ИИ, каждый трек',
+        what: 'Анализирует сам звук, ища следы, которые оставляют генераторы ИИ-музыки. Каждый трек был загружен в виде lossless-файла FLAC, поэтому сжатие с потерями не могло исказить результат. У треков длиннее 3:00 сервис анализирует первые три минуты.',
+        result: 'Каждый трек получил вердикт «Likely human-made» (вероятно, создан человеком) с высокой уверенностью и вероятностью ИИ 0%.',
+        limits: 'Сам сервис называет свой результат «оценкой, а не доказательством».',
+      },
+      aha: {
+        name: 'aha-music AI Music Detector',
+        figure: '1,1–1,2%',
+        figureNote: 'вероятность ИИ, каждый трек',
+        what: 'Анализирует загруженный аудиофайл и оценивает вероятность того, что он создан ИИ. Также показывает, какую ИИ-платформу сервис подозревает (если есть), и оценивает трек целиком. Каждый трек был загружен в виде lossless-файла FLAC. В бесплатной версии доступно три проверки в день, поэтому пять треков проверялись в течение двух дней.',
+        result: 'Каждый трек получил вердикт «Human-Made Music» (музыка, созданная человеком): 1,1% ИИ у «Пути фаталиста», «Вечности» и «Маяка у моря» и 1,2% у «Танцев на набережной» и «Без слов». В поле AI Platform указано «Human», уверенность распознавания — 95%.',
+        limits: 'Значения небольшие, но не равны нулю, поэтому важнее вердикт, чем число: собственный вердикт сервиса для каждого трека — «создано человеком». Как и любой детектор, он даёт оценку, а не доказательство.',
+      },
+      exiftools: {
+        name: 'ExifTools AI Music Checker',
+        figure: 'Меток нет',
+        figureNote: 'ИИ-сервисов ни в одном файле',
+        what: 'Читает метаданные файла в поисках меток, которые оставляют ИИ-сервисы (Suno, Udio, ElevenLabs и другие), а также Content Credentials, заявляющих о генерации ИИ.',
+        result: 'Ни меток ИИ, ни Content Credentials в пяти файлах не найдено. В тегах указаны название трека, исполнитель Roar of the Waves и кодировщик FLAC.',
+        limits: 'Сама по себе — самая слабая из трёх проверок: как сказано в сервисе, ИИ-сервисы не всегда добавляют теги, а теги легко удалить. Она дополняет анализ звука, а не заменяет его.',
+      },
+      captions: {
+        deezerLibrary: 'Deezer: плейлист «Roar of the Waves» в медиатеке (5 треков)',
+        deezerPlaylist: 'Deezer: пять треков в проверенном плейлисте',
+        deezerResult: 'Deezer: AI score плейлиста',
+        deezerShare: 'Deezer: карточка с результатом для публикации',
+      },
+      alts: {
+        deezerLibrary: 'Медиатека Deezer с плейлистом «Roar of the Waves» из 5 треков',
+        deezerPlaylist: 'Плейлист Deezer с пятью проверенными треками Roar of the Waves',
+        deezerResult: 'Страница результата Deezer AI Music Detector: AI score 0%',
+        deezerShare: 'Карточка результата Deezer: 0% моей музыки определено как созданная ИИ',
+        aha: 'Результат aha-music AI Music Detector для «{title}»: Human-Made Music, около 1% ИИ, уверенность распознавания 95%',
+        wavespeed: 'Результат WaveSpeed AI Music Detector для «{title}»: вероятность ИИ 0%, вероятно создан человеком, высокая уверенность',
+        exiftools: 'Результат ExifTools AI Music Checker для «{title}»: меток ИИ-музыки не найдено',
+      },
+      readingTitle: 'Как читать эти результаты',
+      reading: 'Ни один детектор не может доказать, кто создал музыку, — об этом прямо говорят сами сервисы. Важно другое: четыре разные проверки сходятся — классификатор стримингового сервиса, два отдельных анализа звука и проверка файла. Результат также согласуется с тем, как создаётся музыка, о чём сказано в начале страницы. Упомянутые там звуковые артефакты вызваны небольшим опытом сведения, а не генератором.',
+      verifyTitle: 'Проверьте сами',
+      verify: 'Скриншотам можно не верить, поэтому проверки может повторить каждый с помощью сервисов по ссылкам выше. Результаты для аудио, скачанного со стриминговых сервисов, могут немного отличаться: сильное сжатие влияет на анализ звука.',
     },
     coordinates: {
       eyebrow: 'Точки отсчёта',
@@ -291,6 +489,11 @@ export const translations: Record<Lang, Dictionary> = {
         title: 'О проекте',
         description:
           'История Roar of the Waves: русский романтический классицизм встречается с французскими и итальянскими киносаундтреками 1960–70-х годов.',
+      },
+      aiCheck: {
+        title: 'Проверка на ИИ',
+        description:
+          'Результаты четырёх независимых проверок на ИИ-музыку (Deezer, WaveSpeed, aha-music, ExifTools) для треков Roar of the Waves: полные скриншоты и объяснение, что они означают.',
       },
     },
   },
