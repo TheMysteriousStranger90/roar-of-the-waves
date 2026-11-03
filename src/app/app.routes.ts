@@ -14,6 +14,12 @@ export const routes: Routes = [
       import('@features/music/music.component').then((m) => m.MusicComponent),
   },
   {
+    path: 'ai-check',
+    title: 'AI check — Roar of the Waves',
+    loadComponent: () =>
+      import('@features/ai-check/ai-check.component').then((m) => m.AiCheckComponent),
+  },
+  {
     path: 'coordinates',
     title: 'Coordinates — Roar of the Waves',
     loadComponent: () =>
