@@ -83,8 +83,13 @@ const SWIPE_THRESHOLD_PX = 50;
       margin: 0;
       padding: 0;
       border: 0;
-      background: rgba(10, 10, 10, 0.94);
-      color: #f2f1ef;
+      /* Follows the site theme: --c-ink / --c-paper flip between light and dark. */
+      --lb-fg: var(--c-ink);
+      --lb-line: color-mix(in srgb, var(--c-ink) 30%, transparent);
+      --lb-hover: color-mix(in srgb, var(--c-ink) 8%, transparent);
+      --lb-mute: color-mix(in srgb, var(--c-ink) 75%, transparent);
+      background: var(--c-paper);
+      color: var(--lb-fg);
     }
 
     .lb[open] {
@@ -92,7 +97,7 @@ const SWIPE_THRESHOLD_PX = 50;
       grid-template-rows: auto minmax(0, 1fr) auto;
     }
 
-    .lb::backdrop { background: rgba(10, 10, 10, 0.94); }
+    .lb::backdrop { background: transparent; }
 
     .lb__bar {
       display: flex;
@@ -113,28 +118,28 @@ const SWIPE_THRESHOLD_PX = 50;
       font-size: var(--step--1);
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      border-bottom: 1px solid rgba(242, 241, 239, 0.3);
+      border-bottom: 1px solid var(--lb-line);
       padding-bottom: 0.2rem;
       transition: border-color 300ms var(--ease);
     }
 
-    .lb__link:hover { border-color: #f2f1ef; }
-    .lb__link:focus-visible { outline-color: #f2f1ef; }
+    .lb__link:hover { border-color: var(--lb-fg); }
+    .lb__link:focus-visible { outline-color: var(--lb-fg); }
 
     .lb__btn {
       display: grid;
       place-items: center;
       width: 2.75rem;
       height: 2.75rem;
-      border: 1px solid rgba(242, 241, 239, 0.3);
+      border: 1px solid var(--lb-line);
       border-radius: 50%;
       color: inherit;
       font-size: 1.1rem;
       transition: border-color 300ms var(--ease), background 300ms var(--ease);
     }
 
-    .lb__btn:hover { border-color: #f2f1ef; background: rgba(242, 241, 239, 0.08); }
-    .lb__btn:focus-visible { outline-color: #f2f1ef; }
+    .lb__btn:hover { border-color: var(--lb-fg); background: var(--lb-hover); }
+    .lb__btn:focus-visible { outline-color: var(--lb-fg); }
 
     .lb__stage {
       display: flex;
@@ -154,7 +159,7 @@ const SWIPE_THRESHOLD_PX = 50;
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
-      border: 1px solid #f2f1ef;
+      border: 1px solid var(--lb-fg);
     }
 
     .lb__caption {
@@ -162,7 +167,7 @@ const SWIPE_THRESHOLD_PX = 50;
       text-align: center;
       font-size: var(--step--1);
       letter-spacing: 0.08em;
-      color: rgba(242, 241, 239, 0.75);
+      color: var(--lb-mute);
     }
 
     @media (max-width: 40rem) {
