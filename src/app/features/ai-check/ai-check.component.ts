@@ -4,6 +4,7 @@ import { AiCheckTool } from '@core/i18n/translations';
 import { LanguageService } from '@core/services/language.service';
 import { SeoService } from '@core/services/seo.service';
 import { LightboxComponent, LightboxItem } from '@shared/components/lightbox/lightbox.component';
+import { RevealOnScrollDirective } from '@shared/directives/reveal-on-scroll.directive';
 
 import {
   AI_CHECK_IMAGE_DIR,
@@ -35,14 +36,14 @@ interface ToolView {
 @Component({
   selector: 'rotw-ai-check',
   standalone: true,
-  imports: [LightboxComponent],
+  imports: [LightboxComponent, RevealOnScrollDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section class="section">
       <div class="shell">
         <p class="eyebrow">{{ c().eyebrow }}</p>
         <h1 class="page-title display">{{ c().title }}</h1>
-        <div class="note prose">
+        <div class="note prose" rotwReveal>
           <p>{{ c().lede }}</p>
           <p class="checked-on">{{ c().checkedOn }}</p>
         </div>
@@ -113,7 +114,7 @@ interface ToolView {
             </ul>
           </div>
 
-          <div class="closing">
+          <div class="closing" rotwReveal>
             <div>
               <h2 class="closing__title display">{{ c().readingTitle }}</h2>
               <p class="prose">{{ c().reading }}</p>
@@ -132,7 +133,6 @@ interface ToolView {
   styles: `
     .page-title {
       font-size: var(--step-3);
-      text-transform: uppercase;
       margin-block: var(--space-s) var(--space-l);
     }
 
