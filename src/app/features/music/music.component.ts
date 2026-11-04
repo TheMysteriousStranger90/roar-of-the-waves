@@ -19,7 +19,7 @@ import { RevealOnScrollDirective } from '@shared/directives/reveal-on-scroll.dir
         <h1 class="page-title display">{{ t().music.title }}</h1>
 
         <div class="intro">
-          <div class="note prose">
+          <div class="note prose" rotwReveal>
             <p>{{ t().music.note }}</p>
             <p>{{ t().music.noteAlbum }}</p>
             <p>
@@ -102,7 +102,6 @@ import { RevealOnScrollDirective } from '@shared/directives/reveal-on-scroll.dir
   styles: `
     .page-title {
       font-size: var(--step-3);
-      text-transform: uppercase;
       margin-block: var(--space-s) var(--space-l);
     }
 
@@ -209,8 +208,9 @@ import { RevealOnScrollDirective } from '@shared/directives/reveal-on-scroll.dir
       }
 
       .studio {
+        order: -1;
         position: static;
-        max-width: 28rem;
+        max-width: 22rem;
       }
     }
   `,
