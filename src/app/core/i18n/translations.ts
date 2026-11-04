@@ -46,6 +46,11 @@ export interface Dictionary {
     readonly title: string;
     readonly note: string;
     readonly noteAlbum: string;
+    readonly studioGroupLabel: string;
+    readonly studioKontaktAlt: string;
+    readonly studioAbletonAlt: string;
+    readonly prevImageLabel: string;
+    readonly nextImageLabel: string;
     readonly loading: string;
     readonly error: string;
     readonly empty: string;
@@ -177,6 +182,11 @@ export const translations: Record<Lang, Dictionary> = {
       title: 'Music',
       note: 'Every release below stands alone as a single, not a part of something larger. All tracks are created at home entirely on a computer, with no live recordings and no professional studio: just a simple MIDI keyboard, MuseScore Studio, and Ableton Live. The core of the sound relies on the Spotlight Piano VST by Fracture Sounds. However, each track was an experiment with different chains of compression, EQ, and reverb. Due to a lack of deep mixing experience, this process left its mark in the form of occasional audio artifacts on certain releases.',
       noteAlbum: 'A full-length album may follow later — once enough of these individual works have gathered to form one unified whole, and when time, circumstances, and surroundings finally allow for giving music the attention it deserves — and capturing it at a much higher level of quality.',
+      studioGroupLabel: 'Studio screenshots',
+      studioKontaktAlt: 'The Spotlight Piano instrument by Fracture Sounds loaded in Kontakt 8',
+      studioAbletonAlt: 'An Ableton Live project with the piano part shown in the MIDI clip editor',
+      prevImageLabel: 'Previous image',
+      nextImageLabel: 'Next image',
       loading: 'Loading…',
       error: 'The catalogue could not be loaded right now.',
       empty: 'No tracks published yet.',
@@ -351,6 +361,11 @@ export const translations: Record<Lang, Dictionary> = {
       title: 'Музыка',
       note: 'Каждый релиз ниже — это самостоятельный сингл, а не часть чего-то большего. Все треки созданы дома исключительно на компьютере — без использования живых записей или профессиональной студии: только простая MIDI-клавиатура, MuseScore Studio и Ableton Live. В основе звучания неизменно лежит VST-плагин Spotlight Piano от Fracture Sounds. Однако при работе над каждым треком использовался разный набор компрессора, эквалайзера и реверберации, что в силу отсутствия большого опыта сведения привело к появлению звуковых артефактов на некоторых записях.',
       noteAlbum: 'Полноформатный альбом может появиться позже — когда таких отдельных работ накопится достаточно, чтобы сложить из них одно единое целое, и когда обстоятельства, время и условия наконец позволят уделять музыке то внимание, которого она заслуживает, а также делать записи на совершенно ином уровне качества.',
+      studioGroupLabel: 'Скриншоты студийной работы',
+      studioKontaktAlt: 'Инструмент Spotlight Piano от Fracture Sounds, загруженный в Kontakt 8',
+      studioAbletonAlt: 'Проект Ableton Live с фортепианной партией в редакторе MIDI-клипа',
+      prevImageLabel: 'Предыдущее изображение',
+      nextImageLabel: 'Следующее изображение',
       loading: 'Загрузка…',
       error: 'Не удалось загрузить каталог прямо сейчас.',
       empty: 'Треки пока не опубликованы.',
