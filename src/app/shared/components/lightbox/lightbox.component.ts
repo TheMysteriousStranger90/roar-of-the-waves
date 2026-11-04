@@ -154,6 +154,7 @@ const SWIPE_THRESHOLD_PX = 50;
       max-width: 100%;
       max-height: 100%;
       object-fit: contain;
+      border: 1px solid #f2f1ef;
     }
 
     .lb__caption {

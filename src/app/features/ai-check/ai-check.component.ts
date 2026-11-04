@@ -84,11 +84,11 @@ interface ToolView {
 
             <dl class="rows">
               <dt>{{ c().labels.what }}</dt>
-              <dd>{{ tool.copy.what }}</dd>
+              <dd class="prose">{{ tool.copy.what }}</dd>
               <dt>{{ c().labels.result }}</dt>
-              <dd>{{ tool.copy.result }}</dd>
+              <dd class="prose">{{ tool.copy.result }}</dd>
               <dt>{{ c().labels.limits }}</dt>
-              <dd>{{ tool.copy.limits }}</dd>
+              <dd class="prose">{{ tool.copy.limits }}</dd>
             </dl>
 
             <h3 class="shots-label">{{ c().screenshotsLabel }}</h3>
@@ -116,11 +116,11 @@ interface ToolView {
           <div class="closing">
             <div>
               <h2 class="closing__title display">{{ c().readingTitle }}</h2>
-              <p>{{ c().reading }}</p>
+              <p class="prose">{{ c().reading }}</p>
             </div>
             <div>
               <h2 class="closing__title display">{{ c().verifyTitle }}</h2>
-              <p>{{ c().verify }}</p>
+              <p class="prose">{{ c().verify }}</p>
             </div>
           </div>
         </div>
@@ -218,10 +218,13 @@ interface ToolView {
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--c-mute);
-      padding-top: 0.3rem;
+      padding-top: 0.6rem;
     }
 
-    dd { margin: 0; font-weight: 300; }
+    dd.prose,
+    .closing p.prose {
+      font-size: calc(var(--step-1) * 0.8);
+    }
 
     .shots-label {
       margin-top: var(--space-l);
@@ -256,7 +259,7 @@ interface ToolView {
     .shot__open img {
       width: 100%;
       height: auto;
-      border: 1px solid var(--c-line);
+      border: 1px solid var(--c-ink);
       transition: opacity var(--dur) var(--ease);
     }
 
@@ -275,7 +278,6 @@ interface ToolView {
       margin-top: var(--space-xl);
       padding-top: var(--space-l);
       border-top: 1px solid var(--c-line);
-      font-weight: 300;
     }
 
     .closing__title {
