@@ -23,7 +23,7 @@ import {RevealOnScrollDirective} from '@shared/directives/reveal-on-scroll.direc
               class="portrait__frame"
               tabindex="0"
               role="group"
-              routerLink="/coordinates"
+              [routerLink]="lang.link('/coordinates')"
               [attr.aria-label]="t().about.portraitAlt"
               (touchstart)="onTouchStart($event)"
               (touchend)="onTouchEnd($event)"

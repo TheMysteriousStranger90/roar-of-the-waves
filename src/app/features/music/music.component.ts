@@ -23,7 +23,7 @@ import { RevealOnScrollDirective } from '@shared/directives/reveal-on-scroll.dir
             <p>{{ t().music.note }}</p>
             <p>{{ t().music.noteAlbum }}</p>
             <p>
-              <a class="note__link" routerLink="/ai-check">{{ t().aiCheck.musicLink }}</a>
+              <a class="note__link" [routerLink]="lang.link('/ai-check')">{{ t().aiCheck.musicLink }}</a>
             </p>
           </div>
 

@@ -1,7 +1,7 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-
 import { LanguageService } from '@core/services/language.service';
+import { SeoService } from '@core/services/seo.service';
 
 @Component({
   selector: 'rotw-not-found',
@@ -13,7 +13,7 @@ import { LanguageService } from '@core/services/language.service';
       <p class="eyebrow">404</p>
       <h1 class="display nf__title">{{ t().notFound.title }}</h1>
       <p class="prose">{{ t().notFound.text }}</p>
-      <a class="nf__cta" routerLink="/">{{ t().notFound.cta }}</a>
+      <a class="nf__cta" [routerLink]="lang.link('/')">{{ t().notFound.cta }}</a>
     </section>
   `,
   styles: `
@@ -41,4 +41,9 @@ import { LanguageService } from '@core/services/language.service';
 export class NotFoundComponent {
   protected readonly lang = inject(LanguageService);
   protected readonly t = this.lang.dict;
+  private readonly seo = inject(SeoService);
+
+  constructor() {
+    effect(() => this.seo.applyNotFound(this.t().notFound.title));
+  }
 }
