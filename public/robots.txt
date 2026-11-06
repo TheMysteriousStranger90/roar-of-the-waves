@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://roarofthewaves.com/sitemap.xml
+Sitemap: https://roar-of-the-waves.vercel.app/sitemap.xml

@@ -39,7 +39,7 @@ export const APP_CONFIG = new InjectionToken<AppConfig>('APP_CONFIG');
 export const defaultAppConfig: AppConfig = {
   projectName: 'Roar of the Waves',
   tagline: 'Dark piano and cinematic soundscapes',
-  origin: 'https://roarofthewaves.com',
+  origin: 'https://roar-of-the-waves.vercel.app',
   shareImage: {
     path: '/og-image.jpg',
     width: 1200,
