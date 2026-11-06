@@ -20,12 +20,12 @@ type Theme = 'light' | 'dark';
   template: `
     <header class="header">
       <div class="shell header__inner">
-        <a class="header__brand display" routerLink="/">Roar of the Waves</a>
+        <a class="header__brand display" [routerLink]="lang.link('/')">Roar of the Waves</a>
 
         <nav class="header__nav" aria-label="Primary">
-          <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">{{ t().nav.home }}</a>
-          <a routerLink="/music" routerLinkActive="is-active">{{ t().nav.music }}</a>
-          <a routerLink="/about" routerLinkActive="is-active">{{ t().nav.about }}</a>
+          <a [routerLink]="lang.link('/')" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }">{{ t().nav.home }}</a>
+          <a [routerLink]="lang.link('/music')" routerLinkActive="is-active">{{ t().nav.music }}</a>
+          <a [routerLink]="lang.link('/about')" routerLinkActive="is-active">{{ t().nav.about }}</a>
         </nav>
 
         <div class="header__controls">
@@ -135,7 +135,7 @@ export class SiteHeaderComponent {
   constructor() {
     effect(() => {
       const value = this.theme();
-      this.document.documentElement.dataset['theme'] = value;
+      this.document.documentElement.setAttribute('data-theme', value);
       try {
         this.document.defaultView?.localStorage.setItem('rotw-theme', value);
       } catch {

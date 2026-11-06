@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, effect, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, effect, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { LanguageService } from '@core/services/language.service';
@@ -53,7 +53,7 @@ import { RevealOnScrollDirective } from '@shared/directives/reveal-on-scroll.dir
         <p class="hero__lede prose">
           {{ t().home.lede }}
         </p>
-        <a class="hero__cta" routerLink="/music">{{ t().home.cta }}</a>
+        <a class="hero__cta" [routerLink]="lang.link('/music')">{{ t().home.cta }}</a>
       </div>
     </section>
 
@@ -80,7 +80,7 @@ import { RevealOnScrollDirective } from '@shared/directives/reveal-on-scroll.dir
         <blockquote class="pull prose" rotwReveal>
           "{{ t().shared.everyTrackStory }}"
         </blockquote>
-        <a class="hero__cta" routerLink="/about">{{ t().home.readStory }}</a>
+        <a class="hero__cta" [routerLink]="lang.link('/about')">{{ t().home.readStory }}</a>
       </div>
     </section>
   `,
@@ -174,6 +174,9 @@ export class HomeComponent {
         lang: this.lang.lang(),
       });
     });
-    this.seo.setMusicGroupJsonLd(this.tracks.tracks().map((track) => track.url));
+    effect(() => {
+      this.seo.setMusicGroupJsonLd(this.tracks.tracks().map((track) => track.url));
+    });
+    inject(DestroyRef).onDestroy(() => this.seo.clearJsonLd());
   }
 }

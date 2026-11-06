@@ -6,6 +6,26 @@
   <base href="/" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#0a0a0a" />
+  <meta name="description" content="Roar of the Waves — a one-man neoclassical project of dark piano and cinematic soundscapes." />
+  <!--
+    Static defaults for link previews and for the client-rendered 404 shell. Every prerendered page
+    overwrites these through SeoService with its own title, description, URL and language.
+  -->
+  <meta property="og:site_name" content="Roar of the Waves" />
+  <meta property="og:type" content="music.musician" />
+  <meta property="og:title" content="Roar of the Waves" />
+  <meta property="og:description" content="Dark piano and cinematic soundscapes — a one-man neoclassical project." />
+  <meta property="og:image" content="https://roar-of-the-waves.vercel.app/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Roar of the Waves — a storm-worn lighthouse standing alone in the open sea" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Roar of the Waves" />
+  <meta name="twitter:description" content="Dark piano and cinematic soundscapes — a one-man neoclassical project." />
+  <meta name="twitter:image" content="https://roar-of-the-waves.vercel.app/og-image.jpg" />
+  <!-- Applies the saved theme before first paint, so the prerendered page does not flash dark → light. -->
+  <script src="/theme-init.js"></script>
+  <noscript><style>.reveal { opacity: 1; transform: none; }</style></noscript>
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="apple-touch-icon" href="apple-touch-icon-180.png" />

@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, afterNextRender, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { SiteFooterComponent } from '@shared/components/site-footer/site-footer.component';
 import { SiteHeaderComponent } from '@shared/components/site-header/site-header.component';
+import { LanguageService } from '@core/services/language.service';
 import { TracksService } from '@core/services/tracks.service';
 
 @Component({
@@ -24,8 +25,10 @@ import { TracksService } from '@core/services/tracks.service';
 })
 export class AppComponent {
   private readonly tracks = inject(TracksService);
+  private readonly language = inject(LanguageService);
 
   constructor() {
     this.tracks.load();
+    afterNextRender(() => this.language.restoreSavedLanguage());
   }
 }

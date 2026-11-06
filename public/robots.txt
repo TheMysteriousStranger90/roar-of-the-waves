@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://roar-of-the-waves.vercel.app/sitemap.xml
